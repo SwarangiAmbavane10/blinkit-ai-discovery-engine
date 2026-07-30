@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "6f8ef26b-2d88-458a-b076-3a18c5493a54",
+  "payload": {
+    "text": "Best choice",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:43:51",
+    "metadata": {
+      "user_name": "Parmjit Singh",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "6f0f6d9d-7d4f-434b-b9c9-e5f273a3c1e6",
+  "failed_at": "2026-07-29T16:09:16.069204",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "f4694ab4-3702-4846-96ce-f519cc77d538",
+    "payload": {
+      "text": "great",
+      "rating": 5,
+      "timestamp": "2026-07-28T21:29:51",
+      "metadata": {
+        "user_name": "prantik mitra",
+        "thumbs_up_count": 0,
+        "app_version": "18.7.0"
+      }
+    },
+    "fetched_at": "2026-07-29T16:09:15.770473"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "d1c880a8-12b6-4ba6-bc91-f03368b547e0",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:03:16",
+    "metadata": {
+      "user_name": "MOHIT KUMAR GAUTAM",
+      "thumbs_up_count": 0,
+      "app_version": "17.99.1"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.206936"
+}

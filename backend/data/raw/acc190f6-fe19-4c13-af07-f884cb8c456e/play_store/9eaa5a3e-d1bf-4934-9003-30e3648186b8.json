@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "9eaa5a3e-d1bf-4934-9003-30e3648186b8",
+  "payload": {
+    "text": "nice application",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:27:27",
+    "metadata": {
+      "user_name": "alpesh bodana",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

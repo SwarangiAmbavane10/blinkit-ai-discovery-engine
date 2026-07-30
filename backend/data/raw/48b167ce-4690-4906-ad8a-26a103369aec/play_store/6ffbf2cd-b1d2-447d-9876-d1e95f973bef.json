@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "6ffbf2cd-b1d2-447d-9876-d1e95f973bef",
+  "payload": {
+    "text": "best App",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:43:59",
+    "metadata": {
+      "user_name": "Siddharth Gautam",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669412"
+}

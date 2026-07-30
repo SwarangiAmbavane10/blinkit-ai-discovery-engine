@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.389258",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "32062b50-0205-4a18-bfd3-b0e09a739c72",
+    "payload": {
+      "text": "best",
+      "rating": 3,
+      "timestamp": "2026-07-29T16:34:35",
+      "metadata": {
+        "user_name": "Avhad datta",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

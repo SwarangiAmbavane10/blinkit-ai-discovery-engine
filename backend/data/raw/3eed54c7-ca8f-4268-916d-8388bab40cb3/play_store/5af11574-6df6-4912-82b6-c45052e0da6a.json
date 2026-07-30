@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "5af11574-6df6-4912-82b6-c45052e0da6a",
+  "payload": {
+    "text": "Sometimes, Blinkit does not deliver us the items mentioned in the order summary but charge for that",
+    "rating": 2,
+    "timestamp": "2026-07-29T18:25:32",
+    "metadata": {
+      "user_name": "Piyush Kumar",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519301"
+}

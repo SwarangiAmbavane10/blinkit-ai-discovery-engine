@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "d693898f-6bb8-4c3a-88c7-a79175f22ff8",
+  "payload": {
+    "text": "good app",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:57:36",
+    "metadata": {
+      "user_name": "Boota Singh",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

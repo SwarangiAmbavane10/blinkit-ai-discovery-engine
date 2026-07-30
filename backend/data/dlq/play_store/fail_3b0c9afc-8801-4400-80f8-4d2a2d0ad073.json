@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.541315",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "3b0c9afc-8801-4400-80f8-4d2a2d0ad073",
+    "payload": {
+      "text": "\ud83d\ude0a",
+      "rating": 5,
+      "timestamp": "2026-07-29T18:41:43",
+      "metadata": {
+        "user_name": "Jagannth Jagannth",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

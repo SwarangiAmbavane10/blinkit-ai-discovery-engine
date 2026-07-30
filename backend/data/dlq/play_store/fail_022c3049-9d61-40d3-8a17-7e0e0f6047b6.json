@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.554507",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "022c3049-9d61-40d3-8a17-7e0e0f6047b6",
+    "payload": {
+      "text": "nice",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:16:48",
+      "metadata": {
+        "user_name": "ANAM ARiBA",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207284"
+  }
+}

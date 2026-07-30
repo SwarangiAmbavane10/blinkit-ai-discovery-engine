@@ -1,0 +1,19 @@
+{
+  "run_id": "b8a9d12e-1974-48ca-8b69-63535091058d",
+  "failed_at": "2026-07-29T10:31:54.905922",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "google_form",
+    "source_id": "form_003",
+    "payload": {
+      "text": "form_003",
+      "rating": "2",
+      "timestamp": "2026-07-26T14:22:00Z",
+      "metadata": {
+        "Feedback Text": "The search function is annoying. If I search for organic tea, it displays standard tea. Very frustrating to discover premium items.",
+        "Customer City": "Mumbai"
+      }
+    },
+    "fetched_at": "2026-07-29T10:31:54.895090"
+  }
+}

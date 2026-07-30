@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7791bad4-a49f-464d-bba4-6838ec45ee2f",
+  "payload": {
+    "text": "Easy and Fast",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:03:44",
+    "metadata": {
+      "user_name": "Anjinappa Chowdary",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670179"
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "43024dab-193e-43d8-8a53-dda5b48bc6d6",
+  "payload": {
+    "text": "good \ud83d\udc4d",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:56:42",
+    "metadata": {
+      "user_name": "Mohammed Ifthikar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.206995"
+}

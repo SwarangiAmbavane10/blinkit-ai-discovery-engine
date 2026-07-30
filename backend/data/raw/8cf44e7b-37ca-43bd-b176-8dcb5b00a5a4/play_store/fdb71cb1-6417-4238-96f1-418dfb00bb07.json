@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "fdb71cb1-6417-4238-96f1-418dfb00bb07",
+  "payload": {
+    "text": "Good service",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:43:11",
+    "metadata": {
+      "user_name": "Mukesh Pandey",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

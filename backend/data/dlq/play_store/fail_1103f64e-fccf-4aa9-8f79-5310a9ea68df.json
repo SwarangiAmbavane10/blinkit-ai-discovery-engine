@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.596193",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "1103f64e-fccf-4aa9-8f79-5310a9ea68df",
+    "payload": {
+      "text": "nice app",
+      "rating": 5,
+      "timestamp": "2026-07-29T18:05:28",
+      "metadata": {
+        "user_name": "Dinesh Rekha",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

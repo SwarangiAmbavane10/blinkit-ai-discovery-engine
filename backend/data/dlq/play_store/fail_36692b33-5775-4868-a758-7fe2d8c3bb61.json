@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.529259",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "36692b33-5775-4868-a758-7fe2d8c3bb61",
+    "payload": {
+      "text": "nice \ud83d\udc4d\ud83d\udc4d",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:26:13",
+      "metadata": {
+        "user_name": "Tomez Ali",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207197"
+  }
+}

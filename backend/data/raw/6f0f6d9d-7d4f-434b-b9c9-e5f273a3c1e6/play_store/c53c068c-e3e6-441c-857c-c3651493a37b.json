@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "c53c068c-e3e6-441c-857c-c3651493a37b",
+  "payload": {
+    "text": "it was very good \ud83d\ude0a",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:07:28",
+    "metadata": {
+      "user_name": "Lalita Khan",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.770843"
+}

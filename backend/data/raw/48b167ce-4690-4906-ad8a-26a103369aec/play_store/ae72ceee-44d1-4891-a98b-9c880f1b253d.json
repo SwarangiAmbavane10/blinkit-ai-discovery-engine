@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "ae72ceee-44d1-4891-a98b-9c880f1b253d",
+  "payload": {
+    "text": "it is very fast and easy to",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:43:46",
+    "metadata": {
+      "user_name": "inder choudhary",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669433"
+}

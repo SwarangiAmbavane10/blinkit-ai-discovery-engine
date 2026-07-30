@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "d16b00c6-ad37-4286-8912-b6e6158aae81",
+  "payload": {
+    "text": "nice app I like it",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:38:11",
+    "metadata": {
+      "user_name": "Vivek Yadav",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

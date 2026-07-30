@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "c51d9819-2167-46cf-9f10-4ea8a56a0c4c",
+  "payload": {
+    "text": "I like it and it is very helpful",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:09:30",
+    "metadata": {
+      "user_name": "TASLIM Akhai",
+      "thumbs_up_count": 0,
+      "app_version": "17.97.3"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.770803"
+}

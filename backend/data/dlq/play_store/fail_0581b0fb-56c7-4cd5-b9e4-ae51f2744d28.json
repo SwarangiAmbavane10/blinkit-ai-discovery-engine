@@ -1,0 +1,20 @@
+{
+  "run_id": "6f0f6d9d-7d4f-434b-b9c9-e5f273a3c1e6",
+  "failed_at": "2026-07-29T16:09:16.112171",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "0581b0fb-56c7-4cd5-b9e4-ae51f2744d28",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-28T21:03:52",
+      "metadata": {
+        "user_name": "S K.JOGIYA ENTERTAINMENT",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T16:09:15.771610"
+  }
+}

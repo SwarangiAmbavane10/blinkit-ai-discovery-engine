@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "9d1fcdb1-b157-4ec7-a048-0f98569ac807",
+  "payload": {
+    "text": "great",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:57:04",
+    "metadata": {
+      "user_name": "Kajol Kansara",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.772322"
+}

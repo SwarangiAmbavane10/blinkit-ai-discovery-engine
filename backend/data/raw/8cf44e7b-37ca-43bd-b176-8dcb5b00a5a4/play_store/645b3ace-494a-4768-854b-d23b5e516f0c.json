@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "645b3ace-494a-4768-854b-d23b5e516f0c",
+  "payload": {
+    "text": "thank you blinkit",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:24:23",
+    "metadata": {
+      "user_name": "Sumuti Narzary",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

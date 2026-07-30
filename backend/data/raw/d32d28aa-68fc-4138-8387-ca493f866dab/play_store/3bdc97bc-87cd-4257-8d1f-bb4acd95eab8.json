@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "3bdc97bc-87cd-4257-8d1f-bb4acd95eab8",
+  "payload": {
+    "text": "this is good \ud83d\udc4d",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:36:37",
+    "metadata": {
+      "user_name": "Sood G",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

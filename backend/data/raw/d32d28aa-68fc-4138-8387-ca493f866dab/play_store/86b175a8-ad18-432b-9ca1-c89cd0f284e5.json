@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "86b175a8-ad18-432b-9ca1-c89cd0f284e5",
+  "payload": {
+    "text": "nice n friendly",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:38:03",
+    "metadata": {
+      "user_name": "shridhar Iyer",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

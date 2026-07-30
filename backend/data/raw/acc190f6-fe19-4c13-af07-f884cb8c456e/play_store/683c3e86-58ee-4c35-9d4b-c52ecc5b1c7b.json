@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "683c3e86-58ee-4c35-9d4b-c52ecc5b1c7b",
+  "payload": {
+    "text": "nice",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:57:46",
+    "metadata": {
+      "user_name": "Khansa Fatima",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

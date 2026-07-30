@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "b41c159e-b3b0-41f5-90a5-3f17cebf5e9d",
+  "payload": {
+    "text": "wow nice nice good app",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:49:01",
+    "metadata": {
+      "user_name": "Ruby Parveen",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669362"
+}

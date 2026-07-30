@@ -1,0 +1,20 @@
+{
+  "run_id": "3eed54c7-ca8f-4268-916d-8388bab40cb3",
+  "failed_at": "2026-07-30T13:10:19.713832",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "93adc3da-e8f1-460d-9fa9-513b99caf5a9",
+    "payload": {
+      "text": "verygood",
+      "rating": 5,
+      "timestamp": "2026-07-29T17:29:39",
+      "metadata": {
+        "user_name": "Gk viswanadham Gk",
+        "thumbs_up_count": 0,
+        "app_version": null
+      }
+    },
+    "fetched_at": "2026-07-30T13:10:19.519901"
+  }
+}

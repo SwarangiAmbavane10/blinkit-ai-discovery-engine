@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.513199",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "8f5fbbed-1755-4941-b89b-26347161e9ac",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:30:23",
+      "metadata": {
+        "user_name": "chander sohan",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207162"
+  }
+}

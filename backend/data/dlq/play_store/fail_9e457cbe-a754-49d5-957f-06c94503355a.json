@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.578759",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "9e457cbe-a754-49d5-957f-06c94503355a",
+    "payload": {
+      "text": "Nerej",
+      "rating": 5,
+      "timestamp": "2026-07-29T18:25:11",
+      "metadata": {
+        "user_name": "Karan Kumar",
+        "thumbs_up_count": 0,
+        "app_version": null
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

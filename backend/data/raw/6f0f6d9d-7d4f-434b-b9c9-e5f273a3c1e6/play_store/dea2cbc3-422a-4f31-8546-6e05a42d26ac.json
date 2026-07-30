@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "dea2cbc3-422a-4f31-8546-6e05a42d26ac",
+  "payload": {
+    "text": "thank you for delivery in 10 minutes \ud83d\ude4f",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:17:16",
+    "metadata": {
+      "user_name": "Mohan Pandey",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.770635"
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "e6c8c036-3cb1-416f-8350-66a2d1abae7e",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:35:14",
+    "metadata": {
+      "user_name": "Nisha Kumari",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

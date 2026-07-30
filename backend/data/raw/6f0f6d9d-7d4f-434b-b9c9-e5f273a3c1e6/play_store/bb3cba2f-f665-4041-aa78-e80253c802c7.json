@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "bb3cba2f-f665-4041-aa78-e80253c802c7",
+  "payload": {
+    "text": "nice",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:54:52",
+    "metadata": {
+      "user_name": "Ruthra Priya",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.772492"
+}

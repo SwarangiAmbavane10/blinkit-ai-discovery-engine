@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "05dee160-9700-49d4-8030-57003325f543",
+  "payload": {
+    "text": "nice \ud83d\ude42",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:24:22",
+    "metadata": {
+      "user_name": "Santosh Baghel",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669932"
+}

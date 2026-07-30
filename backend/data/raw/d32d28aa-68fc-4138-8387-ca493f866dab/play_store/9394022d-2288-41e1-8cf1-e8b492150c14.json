@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "9394022d-2288-41e1-8cf1-e8b492150c14",
+  "payload": {
+    "text": "very Good",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:44:39",
+    "metadata": {
+      "user_name": "Shashi Kalegar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

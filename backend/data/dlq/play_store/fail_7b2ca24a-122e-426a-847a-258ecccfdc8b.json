@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.376226",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "7b2ca24a-122e-426a-847a-258ecccfdc8b",
+    "payload": {
+      "text": "good",
+      "rating": 4,
+      "timestamp": "2026-07-29T16:36:20",
+      "metadata": {
+        "user_name": "latha priya",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

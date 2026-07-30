@@ -1,0 +1,13 @@
+{
+  "source_type": "google_form",
+  "source_id": "form_003",
+  "payload": {
+    "text": "The search function is annoying. If I search for organic tea, it displays standard tea. Very frustrating to discover premium items.",
+    "rating": "2",
+    "timestamp": "2026-07-26T14:22:00Z",
+    "metadata": {
+      "Customer City": "Mumbai"
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:20.673046"
+}

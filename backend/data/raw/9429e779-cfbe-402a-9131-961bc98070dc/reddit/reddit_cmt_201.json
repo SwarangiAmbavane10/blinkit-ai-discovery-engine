@@ -1,0 +1,16 @@
+{
+  "source_type": "reddit",
+  "source_id": "reddit_cmt_201",
+  "payload": {
+    "text": "True, Blinkit layout is heavily optimized for speed. Their 'Order Again' is the first thing you see. It completely blocks browsing. If I want to find gourmet categories or pet treats, I have to search, and the search results are full of random stuff. I substitution fear is another reason - Blinkit once substituted my organic tofu with normal paneer without asking!",
+    "title": "Comment on category trial",
+    "timestamp": "2026-07-29T15:52:11.375834",
+    "rating": null,
+    "metadata": {
+      "subreddit": "india",
+      "score": 25,
+      "type": "comment"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:11.375841"
+}

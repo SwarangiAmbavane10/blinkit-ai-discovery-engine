@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.370736",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "add79231-ae94-49a4-872d-5a245266418e",
+    "payload": {
+      "text": "\ud83d\udc4d",
+      "rating": 5,
+      "timestamp": "2026-07-29T16:50:51",
+      "metadata": {
+        "user_name": "Nitika negi Nitika negi",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

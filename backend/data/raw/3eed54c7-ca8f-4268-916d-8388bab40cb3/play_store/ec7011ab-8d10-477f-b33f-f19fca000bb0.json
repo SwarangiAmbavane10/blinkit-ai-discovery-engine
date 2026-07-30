@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "ec7011ab-8d10-477f-b33f-f19fca000bb0",
+  "payload": {
+    "text": "\u2665\ufe0f",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:06:01",
+    "metadata": {
+      "user_name": "Hiten Joshi",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519901"
+}

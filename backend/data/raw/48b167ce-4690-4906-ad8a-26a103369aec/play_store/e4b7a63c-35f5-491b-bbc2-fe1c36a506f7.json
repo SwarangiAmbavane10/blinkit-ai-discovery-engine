@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "e4b7a63c-35f5-491b-bbc2-fe1c36a506f7",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:13:20",
+    "metadata": {
+      "user_name": "Piyari Roma Raj",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670101"
+}

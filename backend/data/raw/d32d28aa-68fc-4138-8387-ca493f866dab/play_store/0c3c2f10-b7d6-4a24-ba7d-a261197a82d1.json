@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "0c3c2f10-b7d6-4a24-ba7d-a261197a82d1",
+  "payload": {
+    "text": "\ud83e\udd73 thank you",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:50:33",
+    "metadata": {
+      "user_name": "ismail shaikh",
+      "thumbs_up_count": 0,
+      "app_version": "18.15.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

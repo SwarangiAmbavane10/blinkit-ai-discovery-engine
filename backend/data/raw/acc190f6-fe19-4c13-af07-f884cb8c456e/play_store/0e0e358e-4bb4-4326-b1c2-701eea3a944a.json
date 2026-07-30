@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "0e0e358e-4bb4-4326-b1c2-701eea3a944a",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:27:59",
+    "metadata": {
+      "user_name": "Suman Dey",
+      "thumbs_up_count": 0,
+      "app_version": "17.91.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

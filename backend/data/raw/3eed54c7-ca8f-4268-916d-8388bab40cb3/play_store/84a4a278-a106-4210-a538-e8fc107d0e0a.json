@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "84a4a278-a106-4210-a538-e8fc107d0e0a",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:03:36",
+    "metadata": {
+      "user_name": "Pradeep Kumar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519901"
+}

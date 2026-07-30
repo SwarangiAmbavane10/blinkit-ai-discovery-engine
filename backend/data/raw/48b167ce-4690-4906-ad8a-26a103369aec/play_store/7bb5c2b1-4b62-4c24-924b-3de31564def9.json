@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7bb5c2b1-4b62-4c24-924b-3de31564def9",
+  "payload": {
+    "text": "very good \ud83d\udc4d",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:29:42",
+    "metadata": {
+      "user_name": "Sonu Chaubey",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669819"
+}

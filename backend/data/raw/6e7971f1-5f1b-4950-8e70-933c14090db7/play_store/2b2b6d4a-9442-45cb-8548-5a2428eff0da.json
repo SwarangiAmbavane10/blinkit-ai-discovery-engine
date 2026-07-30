@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "2b2b6d4a-9442-45cb-8548-5a2428eff0da",
+  "payload": {
+    "text": "ok",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:15:38",
+    "metadata": {
+      "user_name": "Kabir Dhakad",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207294"
+}

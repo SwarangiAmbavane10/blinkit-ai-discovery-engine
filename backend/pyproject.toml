@@ -1,0 +1,21 @@
+[project]
+name = "discovery_engine"
+version = "0.1.0"
+description = "Blinkit AI Product Discovery Engine Ingestion & Processing Layer"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "httpx>=0.24.0",
+    "python-dotenv>=1.0.0",
+    "google-play-scraper>=1.2.4",
+    "praw>=7.7.1"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

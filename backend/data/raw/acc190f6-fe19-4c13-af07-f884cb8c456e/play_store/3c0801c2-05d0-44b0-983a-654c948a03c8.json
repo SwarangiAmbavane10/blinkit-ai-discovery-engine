@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "3c0801c2-05d0-44b0-983a-654c948a03c8",
+  "payload": {
+    "text": "GOOD RANGE AVAILABLE",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:36:11",
+    "metadata": {
+      "user_name": "Kuldeep Sharma",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

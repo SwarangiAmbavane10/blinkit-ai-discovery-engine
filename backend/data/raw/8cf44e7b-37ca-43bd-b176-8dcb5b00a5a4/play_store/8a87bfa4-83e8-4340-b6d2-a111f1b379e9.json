@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "8a87bfa4-83e8-4340-b6d2-a111f1b379e9",
+  "payload": {
+    "text": "good \ud83d\udc4d to you \u263a\ufe0f",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:47:08",
+    "metadata": {
+      "user_name": "Jay Mishra",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

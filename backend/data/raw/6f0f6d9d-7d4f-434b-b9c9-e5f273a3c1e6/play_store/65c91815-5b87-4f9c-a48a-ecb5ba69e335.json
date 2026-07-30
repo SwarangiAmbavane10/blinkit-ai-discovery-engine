@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "65c91815-5b87-4f9c-a48a-ecb5ba69e335",
+  "payload": {
+    "text": "worst",
+    "rating": 1,
+    "timestamp": "2026-07-28T21:23:15",
+    "metadata": {
+      "user_name": "Sai Munukoti",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.770610"
+}

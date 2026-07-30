@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "31412447-cfa1-44cf-b964-261083938ff5",
+  "payload": {
+    "text": "it becomes more expensive to buy cheap item",
+    "rating": 3,
+    "timestamp": "2026-07-29T18:44:55",
+    "metadata": {
+      "user_name": "Rajesh Rajesh",
+      "thumbs_up_count": 0,
+      "app_version": "17.99.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

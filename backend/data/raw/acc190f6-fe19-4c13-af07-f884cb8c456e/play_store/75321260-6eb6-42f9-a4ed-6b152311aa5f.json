@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "75321260-6eb6-42f9-a4ed-6b152311aa5f",
+  "payload": {
+    "text": "very good service",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:42:34",
+    "metadata": {
+      "user_name": "Amlan Parida",
+      "thumbs_up_count": 0,
+      "app_version": "17.99.1"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

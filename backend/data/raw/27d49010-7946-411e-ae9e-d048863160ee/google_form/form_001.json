@@ -1,0 +1,13 @@
+{
+  "source_type": "google_form",
+  "source_id": "form_001",
+  "payload": {
+    "text": "I really love Blinkit's speed, but I only use the app to buy milk and eggs. I don't feel motivated to try wellness products because they are expensive.",
+    "rating": "4",
+    "timestamp": "2026-07-28T09:00:00Z",
+    "metadata": {
+      "Customer City": "Delhi"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:18.455566"
+}

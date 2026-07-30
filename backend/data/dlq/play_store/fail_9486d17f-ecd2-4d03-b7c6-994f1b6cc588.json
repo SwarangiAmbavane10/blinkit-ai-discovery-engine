@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.548378",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "9486d17f-ecd2-4d03-b7c6-994f1b6cc588",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:21:06",
+      "metadata": {
+        "user_name": "Shorya Varshney",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207229"
+  }
+}

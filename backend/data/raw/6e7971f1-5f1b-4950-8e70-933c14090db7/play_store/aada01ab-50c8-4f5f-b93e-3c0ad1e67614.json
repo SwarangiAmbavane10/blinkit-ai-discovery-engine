@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "aada01ab-50c8-4f5f-b93e-3c0ad1e67614",
+  "payload": {
+    "text": "Best service",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:58:57",
+    "metadata": {
+      "user_name": "Rohit Kumar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.206964"
+}

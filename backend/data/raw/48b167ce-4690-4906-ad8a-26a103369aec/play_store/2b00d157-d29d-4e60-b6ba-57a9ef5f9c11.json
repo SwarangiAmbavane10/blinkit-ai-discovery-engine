@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "2b00d157-d29d-4e60-b6ba-57a9ef5f9c11",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:53:47",
+    "metadata": {
+      "user_name": "Kailash Sharma",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669272"
+}

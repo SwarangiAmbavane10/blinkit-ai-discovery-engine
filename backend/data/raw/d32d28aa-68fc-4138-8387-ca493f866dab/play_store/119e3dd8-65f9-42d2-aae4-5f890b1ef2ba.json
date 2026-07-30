@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "119e3dd8-65f9-42d2-aae4-5f890b1ef2ba",
+  "payload": {
+    "text": "app is a very nice trustable app",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:02:25",
+    "metadata": {
+      "user_name": "Shahenaz",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

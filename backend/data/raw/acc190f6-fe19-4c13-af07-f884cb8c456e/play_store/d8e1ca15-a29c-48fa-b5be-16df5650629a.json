@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "d8e1ca15-a29c-48fa-b5be-16df5650629a",
+  "payload": {
+    "text": "super fast",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:09:32",
+    "metadata": {
+      "user_name": "premkumar s",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

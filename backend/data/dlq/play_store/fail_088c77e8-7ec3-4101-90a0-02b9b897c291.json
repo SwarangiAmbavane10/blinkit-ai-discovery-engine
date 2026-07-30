@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.555871",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "088c77e8-7ec3-4101-90a0-02b9b897c291",
+    "payload": {
+      "text": "batyehb",
+      "rating": 4,
+      "timestamp": "2026-07-29T18:35:09",
+      "metadata": {
+        "user_name": "sunil kumar",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

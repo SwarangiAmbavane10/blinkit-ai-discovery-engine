@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "740e82d9-c706-4a89-9f3a-57d2154a4bb1",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:34:43",
+    "metadata": {
+      "user_name": "Naina Kesharwani",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

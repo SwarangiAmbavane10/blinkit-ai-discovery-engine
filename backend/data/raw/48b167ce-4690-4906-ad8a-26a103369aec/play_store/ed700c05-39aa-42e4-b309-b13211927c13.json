@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "ed700c05-39aa-42e4-b309-b13211927c13",
+  "payload": {
+    "text": "very easy sir",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:56:55",
+    "metadata": {
+      "user_name": "Sabeena saffi",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669195"
+}

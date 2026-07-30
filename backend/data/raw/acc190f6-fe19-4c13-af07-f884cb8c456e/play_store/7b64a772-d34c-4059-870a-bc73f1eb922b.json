@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7b64a772-d34c-4059-870a-bc73f1eb922b",
+  "payload": {
+    "text": "fast delivery and good service",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:36:52",
+    "metadata": {
+      "user_name": "Gourav Sikligar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

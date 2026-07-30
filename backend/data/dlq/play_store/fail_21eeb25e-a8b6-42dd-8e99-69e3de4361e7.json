@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.342813",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "21eeb25e-a8b6-42dd-8e99-69e3de4361e7",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-29T17:27:10",
+      "metadata": {
+        "user_name": "Virat Kumar singh",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

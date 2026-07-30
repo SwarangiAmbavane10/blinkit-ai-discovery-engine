@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "aed08c3f-b39c-4090-8969-d0fe1a0ef434",
+  "payload": {
+    "text": "\ud83d\udc4d",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:15:46",
+    "metadata": {
+      "user_name": "Pinky Das",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.770647"
+}

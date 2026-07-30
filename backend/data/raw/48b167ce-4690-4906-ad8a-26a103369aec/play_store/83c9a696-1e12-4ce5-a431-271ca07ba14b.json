@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "83c9a696-1e12-4ce5-a431-271ca07ba14b",
+  "payload": {
+    "text": "Good services",
+    "rating": 4,
+    "timestamp": "2026-07-28T15:01:57",
+    "metadata": {
+      "user_name": "sh\u00e3yer ahm\u00ead",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670203"
+}

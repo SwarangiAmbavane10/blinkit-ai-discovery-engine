@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "fce568e3-63d8-46fe-88f4-4ac8fd44401f",
+  "payload": {
+    "text": "\ud83d\udc4d good",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:47:17",
+    "metadata": {
+      "user_name": "Manas Dhali",
+      "thumbs_up_count": 0,
+      "app_version": "18.7.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

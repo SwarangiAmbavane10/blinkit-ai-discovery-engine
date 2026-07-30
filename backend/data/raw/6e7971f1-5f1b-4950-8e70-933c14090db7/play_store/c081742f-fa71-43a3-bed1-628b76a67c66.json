@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "c081742f-fa71-43a3-bed1-628b76a67c66",
+  "payload": {
+    "text": "good \ud83d\udc4d",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:27:45",
+    "metadata": {
+      "user_name": "Sumit Thakur",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207182"
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "3b70f9c5-1517-4b87-aef0-7375bf39f814",
+  "payload": {
+    "text": "fast delivery",
+    "rating": 3,
+    "timestamp": "2026-07-29T16:50:59",
+    "metadata": {
+      "user_name": "NayeemMA Arhaan",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

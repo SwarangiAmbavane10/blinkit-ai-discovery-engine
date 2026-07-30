@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "6a763de0-38fd-45b0-99fc-72abfbdab3ea",
+  "payload": {
+    "text": "great\ud83d\ude03",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:05:13",
+    "metadata": {
+      "user_name": "F4 Films And Cultures",
+      "thumbs_up_count": 0,
+      "app_version": "17.99.1"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670167"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "3eed54c7-ca8f-4268-916d-8388bab40cb3",
+  "failed_at": "2026-07-30T13:10:19.713832",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "3618977f-2e11-4b1b-a13a-0a4b50556e39",
+    "payload": {
+      "text": "good",
+      "rating": 4,
+      "timestamp": "2026-07-29T17:34:18",
+      "metadata": {
+        "user_name": "Zahir Khan",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T13:10:19.519901"
+  }
+}

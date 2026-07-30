@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "8017bed8-1696-49e5-8f3a-5f6bbce8dc13",
+  "payload": {
+    "text": "good service",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:42:38",
+    "metadata": {
+      "user_name": "Meenu Mishra",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207106"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.371952",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "cac8a2bb-b00f-4949-93d3-f32cde4f59de",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-29T16:48:49",
+      "metadata": {
+        "user_name": "Rehan Qureshi",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

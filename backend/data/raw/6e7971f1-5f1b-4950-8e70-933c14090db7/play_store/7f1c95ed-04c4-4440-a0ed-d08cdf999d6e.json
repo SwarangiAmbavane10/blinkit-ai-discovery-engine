@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7f1c95ed-04c4-4440-a0ed-d08cdf999d6e",
+  "payload": {
+    "text": "great app thank you blinkit",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:43:51",
+    "metadata": {
+      "user_name": "The Tandoori Restaurant",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207101"
+}

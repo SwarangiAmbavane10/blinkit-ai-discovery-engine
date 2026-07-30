@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "5c8dfd6c-45dc-475f-a295-7141ecae401a",
+  "payload": {
+    "text": "bahut achcha hai",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:51:54",
+    "metadata": {
+      "user_name": "Aman Samrat",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

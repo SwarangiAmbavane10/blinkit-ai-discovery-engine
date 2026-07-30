@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "28f7a636-e5f2-4ec0-af6e-1c2155031cf6",
+  "payload": {
+    "text": "niche",
+    "rating": 4,
+    "timestamp": "2026-07-29T18:02:01",
+    "metadata": {
+      "user_name": "Prince Soni",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

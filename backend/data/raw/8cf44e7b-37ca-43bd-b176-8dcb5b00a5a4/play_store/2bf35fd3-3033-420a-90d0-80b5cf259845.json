@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "2bf35fd3-3033-420a-90d0-80b5cf259845",
+  "payload": {
+    "text": "nice",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:03:11",
+    "metadata": {
+      "user_name": "sanjay ingale",
+      "thumbs_up_count": 0,
+      "app_version": "18.7.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

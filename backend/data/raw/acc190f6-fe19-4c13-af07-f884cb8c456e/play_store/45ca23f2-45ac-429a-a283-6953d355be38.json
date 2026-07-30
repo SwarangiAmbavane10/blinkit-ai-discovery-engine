@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "45ca23f2-45ac-429a-a283-6953d355be38",
+  "payload": {
+    "text": "Good",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:59:19",
+    "metadata": {
+      "user_name": "Sravani Mohanlal",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

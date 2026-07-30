@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "12b101e6-21cd-42ed-a074-01f699045a6c",
+  "payload": {
+    "text": "I love you blanket \u2764\ufe0f this is popular",
+    "rating": 4,
+    "timestamp": "2026-07-28T20:50:40",
+    "metadata": {
+      "user_name": "Ajay Kumar Sha",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207050"
+}

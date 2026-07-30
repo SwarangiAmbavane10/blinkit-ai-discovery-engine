@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "a78ed28d-f4dd-4bca-8c5e-663c51b9e4ee",
+  "payload": {
+    "text": "best",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:12:10",
+    "metadata": {
+      "user_name": "RahulShyamGupta",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.206864"
+}

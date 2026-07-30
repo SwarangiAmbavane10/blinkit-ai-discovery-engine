@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "a58c6797-d788-4045-8120-ed1d981b5e3b",
+  "payload": {
+    "text": "it is helpful",
+    "rating": 4,
+    "timestamp": "2026-07-28T15:37:26",
+    "metadata": {
+      "user_name": "Hansa Gupta",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669677"
+}

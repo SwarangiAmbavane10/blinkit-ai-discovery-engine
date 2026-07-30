@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "4c49dbe3-dcdf-47d1-9bac-33d9e236cde7",
+  "payload": {
+    "text": "good",
+    "rating": 3,
+    "timestamp": "2026-07-28T15:56:47",
+    "metadata": {
+      "user_name": "Ramniwas",
+      "thumbs_up_count": 0,
+      "app_version": "17.89.1"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669221"
+}

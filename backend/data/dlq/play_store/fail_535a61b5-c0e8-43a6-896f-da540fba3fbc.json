@@ -1,0 +1,20 @@
+{
+  "run_id": "6f0f6d9d-7d4f-434b-b9c9-e5f273a3c1e6",
+  "failed_at": "2026-07-29T16:09:16.168444",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "535a61b5-c0e8-43a6-896f-da540fba3fbc",
+    "payload": {
+      "text": "no offers",
+      "rating": 1,
+      "timestamp": "2026-07-28T20:50:16",
+      "metadata": {
+        "user_name": "Venkat Thota",
+        "thumbs_up_count": 1,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T16:09:15.772682"
+  }
+}

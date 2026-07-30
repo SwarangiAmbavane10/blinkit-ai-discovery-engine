@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "562f95bb-058f-4ae6-8c4e-2080a2ab09e7",
+  "payload": {
+    "text": "good",
+    "rating": 4,
+    "timestamp": "2026-07-29T18:42:27",
+    "metadata": {
+      "user_name": "Mohd Aasim",
+      "thumbs_up_count": 0,
+      "app_version": "17.97.3"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.394239",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "1dcbbb4c-727d-4318-a6b4-ddfa9a9eb9e7",
+    "payload": {
+      "text": "great app",
+      "rating": 5,
+      "timestamp": "2026-07-29T16:30:13",
+      "metadata": {
+        "user_name": "Bharti Lore",
+        "thumbs_up_count": 0,
+        "app_version": null
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

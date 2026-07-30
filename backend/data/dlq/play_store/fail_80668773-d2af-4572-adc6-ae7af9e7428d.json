@@ -1,0 +1,20 @@
+{
+  "run_id": "6f0f6d9d-7d4f-434b-b9c9-e5f273a3c1e6",
+  "failed_at": "2026-07-29T16:09:16.062828",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "80668773-d2af-4572-adc6-ae7af9e7428d",
+    "payload": {
+      "text": "best",
+      "rating": 5,
+      "timestamp": "2026-07-28T21:34:26",
+      "metadata": {
+        "user_name": "Nandani kaurav",
+        "thumbs_up_count": 0,
+        "app_version": null
+      }
+    },
+    "fetched_at": "2026-07-29T16:09:15.770359"
+  }
+}

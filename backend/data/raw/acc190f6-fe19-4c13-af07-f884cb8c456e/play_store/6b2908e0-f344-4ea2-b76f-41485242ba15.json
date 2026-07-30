@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "6b2908e0-f344-4ea2-b76f-41485242ba15",
+  "payload": {
+    "text": "the app is really good ! very reliable. Happy with the service.",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:44:40",
+    "metadata": {
+      "user_name": "Syeda Huma",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

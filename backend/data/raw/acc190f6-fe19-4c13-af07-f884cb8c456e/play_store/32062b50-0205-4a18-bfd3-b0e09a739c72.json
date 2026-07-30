@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "32062b50-0205-4a18-bfd3-b0e09a739c72",
+  "payload": {
+    "text": "best",
+    "rating": 3,
+    "timestamp": "2026-07-29T16:34:35",
+    "metadata": {
+      "user_name": "Avhad datta",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

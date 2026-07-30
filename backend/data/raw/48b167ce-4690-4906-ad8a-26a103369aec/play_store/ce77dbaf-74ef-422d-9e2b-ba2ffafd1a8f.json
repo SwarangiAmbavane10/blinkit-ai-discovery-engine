@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "ce77dbaf-74ef-422d-9e2b-ba2ffafd1a8f",
+  "payload": {
+    "text": "Best app \ud83d\udc4c",
+    "rating": 5,
+    "timestamp": "2026-07-28T14:52:03",
+    "metadata": {
+      "user_name": "Shraddha Dasani",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670399"
+}

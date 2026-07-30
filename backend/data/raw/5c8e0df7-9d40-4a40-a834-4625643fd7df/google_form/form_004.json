@@ -1,0 +1,13 @@
+{
+  "source_type": "google_form",
+  "source_id": "form_004",
+  "payload": {
+    "text": "I always check out in 15 seconds. It is a convenience tool. I don't use it for browsing new items, I use Zepto or physical stores for exploring snacks.",
+    "rating": "3",
+    "timestamp": "2026-07-25T16:30:00Z",
+    "metadata": {
+      "Customer City": "Gurgaon"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:11.413396"
+}

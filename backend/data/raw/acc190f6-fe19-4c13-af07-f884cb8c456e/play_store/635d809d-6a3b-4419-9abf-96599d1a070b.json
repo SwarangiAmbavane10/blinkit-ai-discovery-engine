@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "635d809d-6a3b-4419-9abf-96599d1a070b",
+  "payload": {
+    "text": "I used proper",
+    "rating": 4,
+    "timestamp": "2026-07-29T16:45:36",
+    "metadata": {
+      "user_name": "Pratap Sisodia",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

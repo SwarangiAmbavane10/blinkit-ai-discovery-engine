@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "e8ae3798-e8f3-4012-a31d-0a4ef3960948",
+  "payload": {
+    "text": "ok fast delivery urgent",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:40:48",
+    "metadata": {
+      "user_name": "Mahesh Mahendra",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.719713"
+}

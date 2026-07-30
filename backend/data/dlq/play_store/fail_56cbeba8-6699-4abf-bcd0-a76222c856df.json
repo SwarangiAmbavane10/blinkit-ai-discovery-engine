@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.641511",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "56cbeba8-6699-4abf-bcd0-a76222c856df",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-29T17:39:12",
+      "metadata": {
+        "user_name": "Anurudh Yadav",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

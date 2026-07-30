@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7ccb47f0-f9a1-451f-8bcc-013b55d95669",
+  "payload": {
+    "text": "very good experience",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:35:04",
+    "metadata": {
+      "user_name": "Bhumija Srivastava",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

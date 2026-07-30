@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "cf02260a-a1c3-49d2-b3f6-976498fe330e",
+  "payload": {
+    "text": "good",
+    "rating": 2,
+    "timestamp": "2026-07-28T20:39:12",
+    "metadata": {
+      "user_name": "Yuvraj Singh Khichi",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.773098"
+}

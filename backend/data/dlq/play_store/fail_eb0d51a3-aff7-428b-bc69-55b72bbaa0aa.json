@@ -1,0 +1,20 @@
+{
+  "run_id": "6f0f6d9d-7d4f-434b-b9c9-e5f273a3c1e6",
+  "failed_at": "2026-07-29T16:09:16.059705",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "eb0d51a3-aff7-428b-bc69-55b72bbaa0aa",
+    "payload": {
+      "text": "good",
+      "rating": 4,
+      "timestamp": "2026-07-28T21:34:27",
+      "metadata": {
+        "user_name": "Abdul Fizoon",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-29T16:09:15.770347"
+  }
+}

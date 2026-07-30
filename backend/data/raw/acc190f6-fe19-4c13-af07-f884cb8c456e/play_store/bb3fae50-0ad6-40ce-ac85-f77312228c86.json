@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "bb3fae50-0ad6-40ce-ac85-f77312228c86",
+  "payload": {
+    "text": "very useful",
+    "rating": 4,
+    "timestamp": "2026-07-29T16:50:58",
+    "metadata": {
+      "user_name": "Dharm Vardhan Yadav",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

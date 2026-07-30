@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "b33af283-6da4-4258-bb97-57c779758d2d",
+  "payload": {
+    "text": "very nice \ud83d\ude0a\ud83d\ude0a\ud83d\ude0a\ud83d\ude0a\u2764\ufe0f\ud83d\ude0d\ud83d\ude0d",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:19:05",
+    "metadata": {
+      "user_name": "Rohit Sardar",
+      "thumbs_up_count": 0,
+      "app_version": "18.15.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

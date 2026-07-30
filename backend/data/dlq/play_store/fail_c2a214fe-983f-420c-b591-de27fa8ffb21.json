@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.545841",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "c2a214fe-983f-420c-b591-de27fa8ffb21",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:22:59",
+      "metadata": {
+        "user_name": "Ajay Sawant",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207220"
+  }
+}

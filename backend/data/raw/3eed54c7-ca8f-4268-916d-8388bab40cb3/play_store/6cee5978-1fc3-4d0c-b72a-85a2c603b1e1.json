@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "6cee5978-1fc3-4d0c-b72a-85a2c603b1e1",
+  "payload": {
+    "text": "Any item expiry date is expired",
+    "rating": 1,
+    "timestamp": "2026-07-29T18:33:30",
+    "metadata": {
+      "user_name": "CE_TAPAS_RABIDAS",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519301"
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "0c325137-ef70-4594-bca8-b5a2c0c4a380",
+  "payload": {
+    "text": "very good \ud83d\udc4d\ud83d\udc4d\ud83d\udc4d",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:24:46",
+    "metadata": {
+      "user_name": "Murshad Ali",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

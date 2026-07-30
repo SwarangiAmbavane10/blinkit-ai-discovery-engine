@@ -1,0 +1,20 @@
+{
+  "run_id": "6f0f6d9d-7d4f-434b-b9c9-e5f273a3c1e6",
+  "failed_at": "2026-07-29T16:09:16.065566",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "d514e019-e874-42f8-b4b0-304dc53b7768",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-28T21:33:17",
+      "metadata": {
+        "user_name": "DIPENDRA KUMAR",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T16:09:15.770384"
+  }
+}

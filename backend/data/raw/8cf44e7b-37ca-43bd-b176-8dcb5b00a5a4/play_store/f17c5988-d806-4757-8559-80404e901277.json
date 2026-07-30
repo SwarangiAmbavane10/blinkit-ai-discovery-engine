@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "f17c5988-d806-4757-8559-80404e901277",
+  "payload": {
+    "text": "this app is the best",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:50:45",
+    "metadata": {
+      "user_name": "Pratibha haldekar",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

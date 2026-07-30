@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "9103af0b-4003-4c7b-bfab-abe737c1f3c7",
+  "payload": {
+    "text": "i rate this 10/10 the fastest delivery",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:10:45",
+    "metadata": {
+      "user_name": "jamila Khan",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

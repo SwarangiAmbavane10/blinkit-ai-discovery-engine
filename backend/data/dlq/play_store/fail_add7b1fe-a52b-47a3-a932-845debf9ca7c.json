@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.609241",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "add7b1fe-a52b-47a3-a932-845debf9ca7c",
+    "payload": {
+      "text": "good",
+      "rating": 4,
+      "timestamp": "2026-07-29T17:59:20",
+      "metadata": {
+        "user_name": "Vishwanath Pratap Singh Bhadaoriya",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

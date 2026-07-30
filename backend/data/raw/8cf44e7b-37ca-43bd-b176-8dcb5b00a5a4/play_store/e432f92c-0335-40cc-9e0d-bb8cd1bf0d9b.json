@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "e432f92c-0335-40cc-9e0d-bb8cd1bf0d9b",
+  "payload": {
+    "text": "iska delivery Sahi nahin Hai",
+    "rating": 4,
+    "timestamp": "2026-07-29T18:28:03",
+    "metadata": {
+      "user_name": "Raja Bahadur",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

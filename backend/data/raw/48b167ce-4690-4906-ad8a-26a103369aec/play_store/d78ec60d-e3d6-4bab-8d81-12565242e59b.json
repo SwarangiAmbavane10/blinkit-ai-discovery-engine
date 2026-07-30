@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "d78ec60d-e3d6-4bab-8d81-12565242e59b",
+  "payload": {
+    "text": "good and fast",
+    "rating": 4,
+    "timestamp": "2026-07-28T15:06:41",
+    "metadata": {
+      "user_name": "Prachi Patel",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670151"
+}

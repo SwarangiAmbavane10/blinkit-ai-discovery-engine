@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "9336f9b1-9cc6-4bb4-bdc1-fa097bd6ff5f",
+  "payload": {
+    "text": "way too much delay",
+    "rating": 1,
+    "timestamp": "2026-07-28T14:49:37",
+    "metadata": {
+      "user_name": "sohail patel",
+      "thumbs_up_count": 0,
+      "app_version": "18.7.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670450"
+}

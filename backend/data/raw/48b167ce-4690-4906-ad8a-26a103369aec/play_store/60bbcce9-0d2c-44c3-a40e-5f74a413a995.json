@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "60bbcce9-0d2c-44c3-a40e-5f74a413a995",
+  "payload": {
+    "text": "ok -ok",
+    "rating": 4,
+    "timestamp": "2026-07-28T15:01:13",
+    "metadata": {
+      "user_name": "Jyoti Tiwari",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670245"
+}

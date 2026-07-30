@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "a538a9b2-a999-4f4c-b1d6-1f2837c0669e",
+  "payload": {
+    "text": "very good service",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:43:14",
+    "metadata": {
+      "user_name": "Muhammad asad 786",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669446"
+}

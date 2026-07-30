@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7ecbaf7a-998f-4176-a78d-f5ded0b1ba24",
+  "payload": {
+    "text": "delivery too fast",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:35:50",
+    "metadata": {
+      "user_name": "Anindita Pradhan",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207137"
+}

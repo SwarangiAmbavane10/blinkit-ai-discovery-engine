@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.376226",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "9bfe8d66-8b12-4a9d-aa1d-c482a339b446",
+    "payload": {
+      "text": "nice",
+      "rating": 3,
+      "timestamp": "2026-07-29T16:36:31",
+      "metadata": {
+        "user_name": "PRIYANKA SHARMA",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

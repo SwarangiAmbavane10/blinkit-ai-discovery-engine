@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "d9856d7f-5964-45fb-9a99-c954e7c6c7fc",
+  "payload": {
+    "text": "very good",
+    "rating": 5,
+    "timestamp": "2026-07-28T14:50:35",
+    "metadata": {
+      "user_name": "Girdhari Singh",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670439"
+}

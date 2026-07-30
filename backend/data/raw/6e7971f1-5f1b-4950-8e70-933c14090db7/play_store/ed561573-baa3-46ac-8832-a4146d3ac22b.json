@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "ed561573-baa3-46ac-8832-a4146d3ac22b",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:18:44",
+    "metadata": {
+      "user_name": "26tfg Tguu",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207253"
+}

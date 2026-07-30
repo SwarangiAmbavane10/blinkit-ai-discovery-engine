@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "834e77ac-38be-46f2-983c-c00668c32ae1",
+  "payload": {
+    "text": "good one",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:58:45",
+    "metadata": {
+      "user_name": "Siddharth Paradiya",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

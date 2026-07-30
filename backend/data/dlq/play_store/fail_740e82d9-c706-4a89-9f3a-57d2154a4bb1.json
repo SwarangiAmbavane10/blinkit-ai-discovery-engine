@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.387251",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "740e82d9-c706-4a89-9f3a-57d2154a4bb1",
+    "payload": {
+      "text": "good",
+      "rating": 5,
+      "timestamp": "2026-07-29T16:34:43",
+      "metadata": {
+        "user_name": "Naina Kesharwani",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

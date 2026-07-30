@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "45d4883d-e6f9-46b7-bcbf-c555a798870d",
+  "payload": {
+    "text": "very usefull app",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:28:41",
+    "metadata": {
+      "user_name": "Farha Ikram",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

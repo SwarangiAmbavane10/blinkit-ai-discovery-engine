@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "4a57ed61-fd8c-4b5c-9ecf-2489347e2cfb",
+  "payload": {
+    "text": "very good app",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:31:22",
+    "metadata": {
+      "user_name": "Rekha Jain",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669783"
+}

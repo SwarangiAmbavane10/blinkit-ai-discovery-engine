@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.559179",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "07791fef-e30e-4872-b843-8fc91cdc0363",
+    "payload": {
+      "text": "nice",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:16:21",
+      "metadata": {
+        "user_name": "Manju Nath",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207288"
+  }
+}

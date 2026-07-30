@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "c33289e4-d16f-492e-9585-5c86a7c7e11d",
+  "payload": {
+    "text": "Good",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:40:39",
+    "metadata": {
+      "user_name": "Rahul Wavhalkar",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669496"
+}

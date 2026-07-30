@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "12a47e96-6c0a-4e44-9795-19d32cc5737c",
+  "payload": {
+    "text": "Good app",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:11:26",
+    "metadata": {
+      "user_name": "Praveen Jain",
+      "thumbs_up_count": 0,
+      "app_version": "17.95.4"
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519901"
+}

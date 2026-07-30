@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "68c05cd8-61b2-4eb5-9fd0-c5d20b7c9edd",
+  "payload": {
+    "text": "Did not receive all the products I paid for(online payment)",
+    "rating": 1,
+    "timestamp": "2026-07-28T15:56:54",
+    "metadata": {
+      "user_name": "Vaishnavi Student",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669208"
+}

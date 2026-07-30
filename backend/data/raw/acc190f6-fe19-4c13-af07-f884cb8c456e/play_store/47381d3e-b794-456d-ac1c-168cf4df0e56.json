@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "47381d3e-b794-456d-ac1c-168cf4df0e56",
+  "payload": {
+    "text": "good",
+    "rating": 4,
+    "timestamp": "2026-07-29T17:16:04",
+    "metadata": {
+      "user_name": "Sachin Karn",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

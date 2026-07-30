@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.613809",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "96ab9457-7f42-46c2-95a7-4075a0cfae7f",
+    "payload": {
+      "text": "v nice \ud83d\udc4c",
+      "rating": 5,
+      "timestamp": "2026-07-29T17:58:15",
+      "metadata": {
+        "user_name": "Jagruti",
+        "thumbs_up_count": 0,
+        "app_version": null
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

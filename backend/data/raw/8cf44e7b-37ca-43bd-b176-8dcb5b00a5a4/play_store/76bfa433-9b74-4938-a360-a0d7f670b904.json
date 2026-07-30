@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "76bfa433-9b74-4938-a360-a0d7f670b904",
+  "payload": {
+    "text": "the app is good but the charges are high",
+    "rating": 4,
+    "timestamp": "2026-07-29T18:26:11",
+    "metadata": {
+      "user_name": "Shezy Najmi",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:31:39.241815"
+}

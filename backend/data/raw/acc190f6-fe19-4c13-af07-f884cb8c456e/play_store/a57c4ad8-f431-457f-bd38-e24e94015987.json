@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "a57c4ad8-f431-457f-bd38-e24e94015987",
+  "payload": {
+    "text": "excellent",
+    "rating": 3,
+    "timestamp": "2026-07-29T17:23:05",
+    "metadata": {
+      "user_name": "Atul Kumar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

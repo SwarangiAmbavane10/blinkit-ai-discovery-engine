@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "dd45575a-9086-4480-99e9-5551bb94bbcb",
+  "payload": {
+    "text": "good",
+    "rating": 3,
+    "timestamp": "2026-07-28T14:51:56",
+    "metadata": {
+      "user_name": "Akash Rajput",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670424"
+}

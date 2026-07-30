@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.362408",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "fd31f9d0-8ec5-4e4f-8f4f-b8296f7793c3",
+    "payload": {
+      "text": "very good",
+      "rating": 4,
+      "timestamp": "2026-07-29T17:09:29",
+      "metadata": {
+        "user_name": "Amrin Kauser",
+        "thumbs_up_count": 0,
+        "app_version": "17.55.1"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

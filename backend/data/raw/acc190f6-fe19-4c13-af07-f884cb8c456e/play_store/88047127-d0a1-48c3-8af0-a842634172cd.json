@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "88047127-d0a1-48c3-8af0-a842634172cd",
+  "payload": {
+    "text": "This is good one",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:29:51",
+    "metadata": {
+      "user_name": "obalesh G S",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

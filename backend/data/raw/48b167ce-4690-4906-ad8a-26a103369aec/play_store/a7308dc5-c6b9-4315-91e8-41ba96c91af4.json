@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "a7308dc5-c6b9-4315-91e8-41ba96c91af4",
+  "payload": {
+    "text": "Goog",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:02:35",
+    "metadata": {
+      "user_name": "akshay kumar",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670191"
+}

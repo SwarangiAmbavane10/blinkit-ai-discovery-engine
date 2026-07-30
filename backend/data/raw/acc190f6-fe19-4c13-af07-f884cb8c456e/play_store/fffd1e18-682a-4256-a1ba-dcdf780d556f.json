@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "fffd1e18-682a-4256-a1ba-dcdf780d556f",
+  "payload": {
+    "text": "thik thak",
+    "rating": 3,
+    "timestamp": "2026-07-29T17:26:12",
+    "metadata": {
+      "user_name": "siften Raza",
+      "thumbs_up_count": 0,
+      "app_version": "18.9.3"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

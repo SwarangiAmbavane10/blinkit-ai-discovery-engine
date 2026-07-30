@@ -1,0 +1,20 @@
+{
+  "run_id": "8cf44e7b-37ca-43bd-b176-8dcb5b00a5a4",
+  "failed_at": "2026-07-30T13:31:39.580765",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "8dcb08e8-0f42-40f9-b7cf-cfd3d9be905b",
+    "payload": {
+      "text": "good \ud83d\ude0a",
+      "rating": 4,
+      "timestamp": "2026-07-29T18:22:36",
+      "metadata": {
+        "user_name": "Anmol Singh",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-30T13:31:39.241815"
+  }
+}

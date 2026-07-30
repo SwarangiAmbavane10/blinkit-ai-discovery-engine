@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# User Configurations & Secrets
+.env
+.vscode/
+
+# Intermediate Generated Review Datasets
+blinkit_reviews_raw.csv
+blinkit_reviews_clean.csv
+blinkit_discovery_reviews.csv
+scoring_out.txt
+analysis_report.json
+scoring_out.txt

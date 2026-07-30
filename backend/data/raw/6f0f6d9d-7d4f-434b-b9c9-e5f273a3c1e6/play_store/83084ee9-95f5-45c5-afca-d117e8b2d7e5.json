@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "83084ee9-95f5-45c5-afca-d117e8b2d7e5",
+  "payload": {
+    "text": "good rides",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:48:31",
+    "metadata": {
+      "user_name": "Ravi Gautam",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.772744"
+}

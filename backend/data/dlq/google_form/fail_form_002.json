@@ -1,0 +1,19 @@
+{
+  "run_id": "b8a9d12e-1974-48ca-8b69-63535091058d",
+  "failed_at": "2026-07-29T10:31:54.904456",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "google_form",
+    "source_id": "form_002",
+    "payload": {
+      "text": "form_002",
+      "rating": "2",
+      "timestamp": "2026-07-27T10:15:00Z",
+      "metadata": {
+        "Feedback Text": "I tried buying fresh paneer last week, but the app sent me one that was close to expiry. The trust isn't there, so I avoid other fresh categories now.",
+        "Customer City": "Bangalore"
+      }
+    },
+    "fetched_at": "2026-07-29T10:31:54.895072"
+  }
+}

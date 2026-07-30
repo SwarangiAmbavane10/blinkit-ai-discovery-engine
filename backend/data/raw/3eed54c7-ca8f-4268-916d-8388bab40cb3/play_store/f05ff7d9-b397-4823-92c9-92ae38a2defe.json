@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "f05ff7d9-b397-4823-92c9-92ae38a2defe",
+  "payload": {
+    "text": "Good Gooder Goodest",
+    "rating": 5,
+    "timestamp": "2026-07-29T18:25:09",
+    "metadata": {
+      "user_name": "MOHAN LAL",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519901"
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "bb18a179-677f-406d-b9d9-eceb2eb4ba01",
+  "payload": {
+    "text": "exelent",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:33:08",
+    "metadata": {
+      "user_name": "Vishal Saini",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "96a401a8-279d-4e0a-89da-3d4d13d5b863",
+  "payload": {
+    "text": "waiting for delivery",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:02:40",
+    "metadata": {
+      "user_name": "bafin aiyanna",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.772043"
+}

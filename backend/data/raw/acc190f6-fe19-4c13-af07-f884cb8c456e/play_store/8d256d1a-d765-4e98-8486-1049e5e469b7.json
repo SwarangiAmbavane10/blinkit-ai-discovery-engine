@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "8d256d1a-d765-4e98-8486-1049e5e469b7",
+  "payload": {
+    "text": "good app",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:34:55",
+    "metadata": {
+      "user_name": "Kishore Panwar",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

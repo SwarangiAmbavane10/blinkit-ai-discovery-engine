@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "398292a4-7395-49c9-aed1-cf6b456c9dc2",
+  "payload": {
+    "text": "nice",
+    "rating": 4,
+    "timestamp": "2026-07-29T17:42:51",
+    "metadata": {
+      "user_name": "Med kid",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:43.718643"
+}

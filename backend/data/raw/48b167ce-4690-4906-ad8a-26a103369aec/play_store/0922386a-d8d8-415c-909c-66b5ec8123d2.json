@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "0922386a-d8d8-415c-909c-66b5ec8123d2",
+  "payload": {
+    "text": "good service",
+    "rating": 5,
+    "timestamp": "2026-07-28T15:38:49",
+    "metadata": {
+      "user_name": "Shalini Srivastava",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.669574"
+}

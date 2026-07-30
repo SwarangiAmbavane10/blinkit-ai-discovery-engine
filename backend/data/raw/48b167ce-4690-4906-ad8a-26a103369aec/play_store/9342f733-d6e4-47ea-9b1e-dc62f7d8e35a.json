@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "9342f733-d6e4-47ea-9b1e-dc62f7d8e35a",
+  "payload": {
+    "text": "Very helpful",
+    "rating": 5,
+    "timestamp": "2026-07-28T14:44:17",
+    "metadata": {
+      "user_name": "S.thahir S.m.t.thahir",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670537"
+}

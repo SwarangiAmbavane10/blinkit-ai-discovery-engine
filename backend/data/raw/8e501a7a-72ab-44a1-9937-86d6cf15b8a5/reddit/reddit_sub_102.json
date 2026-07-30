@@ -1,0 +1,16 @@
+{
+  "source_type": "reddit",
+  "source_id": "reddit_sub_102",
+  "payload": {
+    "text": "Has anyone else stopped buying fruits and vegetables from Blinkit? The last three times I ordered tomatoes and bananas, they were bruised or stale. The convenience of 10-minute delivery doesn't make up for trash quality. I'm going back to the local vendor for fresh produce.",
+    "title": "Blinkit vegetables quality has gone down drastically",
+    "timestamp": "2026-07-30T13:16:44.881560",
+    "rating": null,
+    "metadata": {
+      "subreddit": "bangalore",
+      "score": 80,
+      "type": "submission"
+    }
+  },
+  "fetched_at": "2026-07-30T13:16:44.881560"
+}

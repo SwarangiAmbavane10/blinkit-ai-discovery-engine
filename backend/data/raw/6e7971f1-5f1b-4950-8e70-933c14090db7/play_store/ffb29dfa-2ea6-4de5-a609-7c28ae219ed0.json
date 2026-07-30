@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "ffb29dfa-2ea6-4de5-a609-7c28ae219ed0",
+  "payload": {
+    "text": "best app",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:24:56",
+    "metadata": {
+      "user_name": "Siddharth Singh",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-29T15:52:09.207211"
+}

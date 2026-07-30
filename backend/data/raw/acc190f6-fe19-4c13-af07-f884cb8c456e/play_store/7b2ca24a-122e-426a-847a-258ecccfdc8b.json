@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "7b2ca24a-122e-426a-847a-258ecccfdc8b",
+  "payload": {
+    "text": "good",
+    "rating": 4,
+    "timestamp": "2026-07-29T16:36:20",
+    "metadata": {
+      "user_name": "latha priya",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "acc190f6-fe19-4c13-af07-f884cb8c456e",
+  "failed_at": "2026-07-30T12:24:04.376226",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "5fc631c8-1bf7-462d-9b34-a3e819ab7086",
+    "payload": {
+      "text": "best",
+      "rating": 5,
+      "timestamp": "2026-07-29T16:42:06",
+      "metadata": {
+        "user_name": "Ekansh Srivastava",
+        "thumbs_up_count": 0,
+        "app_version": "18.9.3"
+      }
+    },
+    "fetched_at": "2026-07-30T12:24:04.163970"
+  }
+}

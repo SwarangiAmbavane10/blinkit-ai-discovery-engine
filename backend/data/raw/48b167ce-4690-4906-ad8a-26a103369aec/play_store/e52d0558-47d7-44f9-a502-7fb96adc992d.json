@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "e52d0558-47d7-44f9-a502-7fb96adc992d",
+  "payload": {
+    "text": "very nice",
+    "rating": 5,
+    "timestamp": "2026-07-28T14:53:49",
+    "metadata": {
+      "user_name": "DINESH KUMAR",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T10:31:52.670372"
+}

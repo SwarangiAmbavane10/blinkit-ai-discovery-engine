@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "2d18b577-aa30-4edd-9952-6bb568a64cb1",
+  "payload": {
+    "text": "good service",
+    "rating": 5,
+    "timestamp": "2026-07-28T20:49:01",
+    "metadata": {
+      "user_name": "Tarang Bhardwaj",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.772723"
+}

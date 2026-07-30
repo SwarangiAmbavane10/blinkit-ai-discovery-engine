@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.543445",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "14230fdb-25c0-475a-9e53-c73a45fd52e8",
+    "payload": {
+      "text": "good",
+      "rating": 4,
+      "timestamp": "2026-07-28T20:23:52",
+      "metadata": {
+        "user_name": "Dharani Paramasivam",
+        "thumbs_up_count": 0,
+        "app_version": "18.7.0"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207215"
+  }
+}

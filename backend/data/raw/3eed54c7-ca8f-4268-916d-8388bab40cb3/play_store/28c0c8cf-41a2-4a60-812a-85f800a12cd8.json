@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "28c0c8cf-41a2-4a60-812a-85f800a12cd8",
+  "payload": {
+    "text": "they don't return items after delivery if product is not good",
+    "rating": 1,
+    "timestamp": "2026-07-29T17:54:33",
+    "metadata": {
+      "user_name": "Deepak Sharma",
+      "thumbs_up_count": 0,
+      "app_version": null
+    }
+  },
+  "fetched_at": "2026-07-30T13:10:19.519901"
+}

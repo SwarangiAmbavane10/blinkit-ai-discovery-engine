@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "4789e9d1-6ec3-47f0-bd91-452b9cf90ea7",
+  "payload": {
+    "text": "my first order i check this dilivery time",
+    "rating": 5,
+    "timestamp": "2026-07-29T17:02:42",
+    "metadata": {
+      "user_name": "Nazra Rustam",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

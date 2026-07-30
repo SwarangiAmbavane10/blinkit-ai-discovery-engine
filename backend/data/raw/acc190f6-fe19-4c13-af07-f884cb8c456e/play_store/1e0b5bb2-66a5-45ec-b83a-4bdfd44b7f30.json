@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "1e0b5bb2-66a5-45ec-b83a-4bdfd44b7f30",
+  "payload": {
+    "text": "Nice app",
+    "rating": 5,
+    "timestamp": "2026-07-29T16:47:58",
+    "metadata": {
+      "user_name": "Man Perfect",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-30T12:24:04.163970"
+}

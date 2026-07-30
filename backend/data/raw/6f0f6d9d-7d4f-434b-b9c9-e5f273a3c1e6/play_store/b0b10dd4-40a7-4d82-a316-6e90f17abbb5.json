@@ -1,0 +1,15 @@
+{
+  "source_type": "play_store",
+  "source_id": "b0b10dd4-40a7-4d82-a316-6e90f17abbb5",
+  "payload": {
+    "text": "good",
+    "rating": 5,
+    "timestamp": "2026-07-28T21:38:03",
+    "metadata": {
+      "user_name": "Malar Siva",
+      "thumbs_up_count": 0,
+      "app_version": "18.13.0"
+    }
+  },
+  "fetched_at": "2026-07-29T16:09:15.770233"
+}

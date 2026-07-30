@@ -1,0 +1,20 @@
+{
+  "run_id": "6e7971f1-5f1b-4950-8e70-933c14090db7",
+  "failed_at": "2026-07-29T15:52:09.526219",
+  "error_reason": "TEXT_TOO_SHORT",
+  "record": {
+    "source_type": "play_store",
+    "source_id": "6567898a-ff8a-431c-a373-aff3202d9a4b",
+    "payload": {
+      "text": "nice",
+      "rating": 5,
+      "timestamp": "2026-07-28T20:27:20",
+      "metadata": {
+        "user_name": "Akash Seth",
+        "thumbs_up_count": 0,
+        "app_version": "18.13.0"
+      }
+    },
+    "fetched_at": "2026-07-29T15:52:09.207187"
+  }
+}

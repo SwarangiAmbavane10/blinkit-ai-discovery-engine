@@ -4,6 +4,38 @@ This project defines and implements an **AI-powered Product Discovery Engine** f
 
 ---
 
+## Architecture
+
+The system follows a **Retrieval-Augmented Generation (RAG)-based AI pipeline** to ingest, process, retrieve, and synthesize qualitative user feedback. The overall flow is as follows:
+
+```text
+User Reviews
+↓
+Data Cleaning
+↓
+Discovery Filtering
+↓
+Retrieval Engine
+↓
+LLM Analysis (Groq Llama-3.3 / Google Gemini)
+↓
+AI Product Insights
+↓
+Dashboard
+```
+
+### Component Breakdown
+
+* **Data Collection sources**: Collects raw customer reviews and feedback from various sources, including mobile app stores (Google Play Store, Apple App Store), social media platforms (Reddit), and custom feedback CSV survey forms.
+* **Data Cleaning process**: Normalizes raw data schemas, deduplicates identical/repeated entries, validates rating boundaries, and utilizes a PII Redactor to strip away sensitive personal details (e.g., email addresses, phone numbers).
+* **Discovery Review Filtering**: Uses a taxonomy-driven topic matcher and keyword exclusions to filter out system-level noise (like OTP failures, application crashes, payment transaction issues, and delivery agent complaints) to focus solely on category browsing, search usability, freshness trust, and product discovery.
+* **Retrieval Engine**: Utilizes a TF-IDF and Cosine Similarity retrieval model to query the clean review corpus, fetching the top-k most relevant customer reviews corresponding to specific discovery questions.
+* **LLM Analysis**: Takes the retrieved context, combines it with the core business growth targets inside a structured Prompt Builder, and invokes LLMs (Groq Llama-3.3 or Google Gemini) to perform deep synthesis.
+* **Generated Insights**: Outputs highly structured JSON reports containing root-cause analysis (symptom-cause trees), customer behavioral segmentation, Jobs-to-be-Done (JTBD) hypotheses, and prioritized category opportunities.
+* **Dashboard output**: Displays the final synthesized findings through a Streamlit interactive web dashboard, presenting interactive tables, charts, customer quotes, and query search tools for product managers.
+
+---
+
 ## Folder Layout
 
 ```

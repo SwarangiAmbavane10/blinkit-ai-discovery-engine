@@ -42,7 +42,13 @@ def test_live_llm_connection():
     provider = settings.LLM_PROVIDER
     client = GeminiClient()
     
-    if provider == "gemini" and settings.GEMINI_API_KEY:
+    gemini_key = settings.GEMINI_API_KEY
+    groq_key = settings.GROQ_API_KEY
+    
+    is_gemini_active = provider == "gemini" and gemini_key and not gemini_key.startswith("YOUR_")
+    is_groq_active = provider == "groq" and groq_key and not groq_key.startswith("YOUR_")
+    
+    if is_gemini_active:
         print("\nTesting live Google Gemini API connection...")
         prompt = "Write a JSON object with a single key 'status' and value 'connected'."
         res = client.generate_content(prompt, json_mode=True)
@@ -53,7 +59,7 @@ def test_live_llm_connection():
         else:
             print(f"Google Gemini returned parse error or api issue: {res}")
             
-    elif provider == "groq" and settings.GROQ_API_KEY:
+    elif is_groq_active:
         print("\nTesting live Groq API connection...")
         prompt = "Write a JSON object with a single key 'status' and value 'connected'."
         res = client.generate_content(prompt, json_mode=True)
@@ -64,4 +70,5 @@ def test_live_llm_connection():
         else:
             print(f"Groq returned parse error or api issue: {res}")
     else:
-        pytest.skip(f"API key not configured for provider: {provider}. Skipping live connection test.")
+        pytest.skip(f"API key not configured or is placeholder for provider: {provider}. Skipping live connection test.")
+

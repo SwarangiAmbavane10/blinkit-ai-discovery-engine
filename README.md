@@ -1,130 +1,117 @@
-# Blinkit AI Product Discovery Engine
+# Blinkit AI Growth: 5-Layer Automated AI Data Pipeline
 
-This project defines and implements an **AI-powered Product Discovery Engine** for the Blinkit quick commerce growth case study. The engine analyzes qualitative user feedback from multiple channels to explain why category exploration stalls for Monthly Active Customers (MAC) and surfaces product improvement opportunities.
+A production-ready, automated AI Data Pipeline that aggregates customer reviews from multiple channels (app stores, social platforms, blogs), cleans and normalizes the data streams, extracts structured user segment pain points via LLM synthesis, generates dense vector embeddings, and indexes them into a Pinecone Vector Database.
 
 ---
 
-## Architecture
+## 🚀 Pipeline Architecture
 
-The system follows a **Retrieval-Augmented Generation (RAG)-based AI pipeline** to ingest, process, retrieve, and synthesize qualitative user feedback. The overall flow is as follows:
+The system is structured as a **5-layer automated pipeline** designed to run on a cron schedule or via manual triggers:
 
 ```text
-User Reviews
-↓
-Data Cleaning
-↓
-Discovery Filtering
-↓
-Retrieval Engine
-↓
-LLM Analysis (Groq Llama-3.3 / Google Gemini)
-↓
-AI Product Insights
-↓
-Dashboard
+  [ Social & App Scrapers ] (Play Store, App Store, Reddit, Twitter, Medium RSS)
+               │
+               ▼
+     [ Ingestion Layer ]   (Clean, sanitize, normalize schema & deduplicate via MD5) -> raw_reviews_dump.json
+               │
+               ▼
+    [ AI Insight Synthesis ] (Structured JSON: sentiment, unmet need, segment via Groq Llama 3.1) -> synthesized_needs.json
+               │
+               ▼
+   [ Vector Embedding Gen ] (Generate 384D dense vectors via sentence-transformers all-MiniLM-L6-v2)
+               │
+               ▼
+    [ Vector Storage Index ] (Create index and batch-upsert vectors + metadata to Pinecone DB)
 ```
 
 ### Component Breakdown
-
-* **Data Collection sources**: Collects raw customer reviews and feedback from various sources, including mobile app stores (Google Play Store, Apple App Store), social media platforms (Reddit), and custom feedback CSV survey forms.
-* **Data Cleaning process**: Normalizes raw data schemas, deduplicates identical/repeated entries, validates rating boundaries, and utilizes a PII Redactor to strip away sensitive personal details (e.g., email addresses, phone numbers).
-* **Discovery Review Filtering**: Uses a taxonomy-driven topic matcher and keyword exclusions to filter out system-level noise (like OTP failures, application crashes, payment transaction issues, and delivery agent complaints) to focus solely on category browsing, search usability, freshness trust, and product discovery.
-* **Retrieval Engine**: Utilizes a TF-IDF and Cosine Similarity retrieval model to query the clean review corpus, fetching the top-k most relevant customer reviews corresponding to specific discovery questions.
-* **LLM Analysis**: Takes the retrieved context, combines it with the core business growth targets inside a structured Prompt Builder, and invokes LLMs (Groq Llama-3.3 or Google Gemini) to perform deep synthesis.
-* **Generated Insights**: Outputs highly structured JSON reports containing root-cause analysis (symptom-cause trees), customer behavioral segmentation, Jobs-to-be-Done (JTBD) hypotheses, and prioritized category opportunities.
-* **Dashboard output**: Displays the final synthesized findings through a Streamlit interactive web dashboard, presenting interactive tables, charts, customer quotes, and query search tools for product managers.
+1. **WORKFLOW ORCHESTRATOR**: A Github Actions weekly cron schedule that configures virtual environments, pulls dependencies, injects secrets, and coordinates execution.
+2. **SCRAPING LAYER**: Modular scraper scripts for Play Store, App Store, Reddit public API feeds, Twitter v2 searches, and Medium tag feeds. Supports complete mock fallback logic for credentials-free sandboxes.
+3. **INGESTION LAYER**: Text preprocessing module (normalizes character encodings, strips HTML markup, normalizes spaces) and handles MD5 content hashing deduplication.
+4. **AI PROCESSING LAYER**: Multi-threaded parallel inference caller targeting Groq API endpoints using `llama-3.1-8b-instant` to parse JSON metadata attributes, paired with a local `sentence-transformers` model to map semantic embeddings.
+5. **STORAGE LAYER**: Database router that creates serverless Pinecone indexes and pushes vector sets alongside text payloads.
 
 ---
 
-## Folder Layout
+## 📂 Folder Layout
 
-```
+```text
 blinkit-ai-discovery-engine/
-├── backend/
-│   ├── data/
-│   │   ├── raw/                      # Raw JSON connector feeds (Phases 1-2)
-│   │   ├── dlq/                      # Dead Letter Queue files
-│   │   ├── google_form_responses.csv # Mock survey response CSV source
-│   │   └── clean_reviews.csv         # Cleaned, normalized, and deduplicated CSV database
-│   ├── src/
-│   │   └── discovery_engine/
-│   │       ├── config/               # Settings loading (constants & settings)
-│   │       ├── models/               # Pydantic schemas (RawRecord, CanonicalReview, IngestionRun)
-│   │       ├── utils/                # Logging setup
-│   │       ├── validation/           # Rating verification and PII Redactor
-│   │       ├── loaders/              # Connectors (Play Store, App Store, Reddit, CSV)
-│   │       ├── cleaning/             # Cleaner and CSV exporter modules
-│   │       ├── retrieval/            # Cosine similarity/TF-IDF text retriever
-│   │       └── llm/                  # Prompt builder and Gemini REST API Client
-│   └── tests/                        # Unit test suite for validation, cleaning, and search
-├── analysis/
-│   └── results/
-│       └── report.json               # Synthesized JSON output report (Phase 5 analysis)
-├── app.py                            # Streamlit frontend application entry point
-├── main.py                           # Central backend application runner
-├── query_and_analyze.py                   # Script to test backend pipeline integration
-├── requirements_frontend.txt         # Frontend package requirements
-├── .env                              # Environment variable configurations
-└── README.md                         # Project documentation
+├── .github/workflows/
+│   └── pipeline.yml         # GitHub Actions Weekly Cron Orchestrator
+├── data/
+│   ├── raw_reviews_dump.json    # Layer 3 cleaned and deduplicated reviews
+│   └── synthesized_needs.json   # Layer 4 AI insights enriched reviews
+├── src/
+│   ├── scrapers/
+│   │   ├── __init__.py
+│   │   ├── play_store.py    # Play Store reviews scraper
+│   │   ├── app_store.py     # App Store reviews scraper
+│   │   ├── reddit.py        # Reddit credentials-free JSON and PRAW searcher
+│   │   ├── twitter.py       # Twitter/X API search client
+│   │   └── medium.py        # Medium RSS tag XML feed parser
+│   ├── ingest.py            # Aggregate streams, clean, and deduplicate
+│   ├── process_insights.py  # Structured JSON insight extraction using Groq
+│   ├── generate_embeddings.py # 384D semantic vector embedding mapper
+│   └── upsert_pinecone.py   # Pinecone index management and batch indexing
+├── main.py                  # End-to-end pipeline coordinator
+├── requirements.txt         # Package dependencies
+└── README.md                # System documentation
 ```
 
 ---
 
-## 1. How to Install Dependencies
+## ⚙️ Environment Variables Config
 
-Make sure you have Python 3.11+ installed. To install all dependencies for both the backend and frontend, run the following:
+Create or update the `.env` file in the project root directory:
 
-```bash
-# Install backend dependencies
-pip install -r backend/requirements.txt
-
-# Install frontend dependencies
-pip install -r requirements_frontend.txt
-```
-
----
-
-## 2. How to Run the Backend Ingestion Pipeline
-
-To run the raw review collection, validation, cleaning, retrieval, and LLM synthesis, execute the central runner:
-
-```bash
-python main.py
-```
-
-### Backend Configurations
-Create or update the `.env` file in the workspace root or `backend/` directory to configure API keys:
 ```env
 # Application Config
 LOG_LEVEL=INFO
 
-# Storage Config
-RAW_STORE_DIR=./backend/data/raw
-DEAD_LETTER_QUEUE_DIR=./backend/data/dlq
-CLEANED_DATA_PATH=backend/data/clean_reviews.csv
+# Groq Config
+GROQ_API_KEY=YOUR_GROQ_API_KEY
+GROQ_MODEL=llama-3.1-8b-instant
 
-# Google Gemini Config
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-GEMINI_MODEL=gemini-1.5-flash
+# Pinecone Config
+PINECONE_API_KEY=YOUR_PINECONE_API_KEY
+PINECONE_INDEX_NAME=blinkit-ai-discovery
+
+# Optional Social Credentials (Scrapers fall back to public feeds/mocks if omitted)
+REDDIT_CLIENT_ID=
+REDDIT_CLIENT_SECRET=
+TWITTER_BEARER_TOKEN=
 ```
-
-*Note: If no `GEMINI_API_KEY` is provided, the engine will gracefully fall back to generating high-quality mock analysis matching the Phase 5 schema.*
 
 ---
 
-## 3. How to Run the Frontend Dashboard
+## 🛠️ Local Execution & Verification
 
-To launch the interactive PM growth dashboard, run the following command in the project root folder:
+Follow these steps to run the pipeline on your local machine:
 
-```bash
-streamlit run app.py
-```
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Execute Ingestion & AI Pipeline**:
+   ```bash
+   python main.py
+   ```
+   *Note: If no API keys are provided in the `.env` file, the pipeline will automatically utilize mock heuristics engines to run completely end-to-end and index simulated vectors into Pinecone (dry-run mode).*
 
-Streamlit will boot up local server and automatically open the application in your browser (usually at `http://localhost:8501`).
+3. **Output Files to Inspect**:
+   - `data/raw_reviews_dump.json`: Verify that reviews have been cleaned, formatted, and deduplicated.
+   - `data/synthesized_needs.json`: Verify that sentiment, segments, frustration levels, and unmet needs have been populated as JSON fields.
 
-### Dashboard Features
-- **Overview Dashboard**: Track metrics (Total reviews, Play Store counts, Reddit mentions, Google Forms responses) and view charts showing distribution by channel and overall sentiment.
-- **Sentiment & Topic Analysis**: Star rating distribution chart, active theme indicators, and common keywords from the cleaned review corpus.
-- **Customer Pain Points**: Explores specific pain point clusters and themes, lists the issues, prints supporting quotes, and includes an interactive keyword query tool.
-- **User Segmentation**: Displays behavioral segments (Routine Buyers, New Product Explorers, Health Conscious/Premium Seekers) with details on exploration barriers and likelihood.
-- **Opportunity Generator**: Structured opportunities table (matching L1 categories and targets), Jobs-to-be-Done (JTBD) hypotheses, and root-cause symptom-cause trees.
+---
+
+## ⏰ GitHub Actions Automations
+
+The workflow `.github/workflows/pipeline.yml` is scheduled to run:
+* **Cron Time**: Every Monday at 7:00 AM IST (`30 1 * * 1` UTC).
+* **Manual execution**: Can be triggered anytime via **Workflow Dispatch** under the Github Actions tab.
+
+To activate, add the repository secrets on GitHub:
+* `GROQ_API_KEY`
+* `PINECONE_API_KEY`
+* `PINECONE_INDEX_NAME`

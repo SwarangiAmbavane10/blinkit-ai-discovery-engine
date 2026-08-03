@@ -12,3 +12,6 @@ pytest>=7.0.0
 pytest-cov>=4.0.0
 fastapi>=0.100.0
 uvicorn>=0.20.0
+sentence-transformers>=2.2.0
+pinecone-client>=3.0.0
+app-store-scraper>=0.3.5

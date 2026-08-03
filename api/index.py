@@ -37,6 +37,7 @@ app.add_middleware(
 )
 
 # Absolute Paths
+SCRAPED_CSV_PATH = os.path.join(BASE_DIR, "data", "scraped_reviews.csv")
 CLEAN_CSV_PATH = os.path.join(BASE_DIR, "backend", "data", "clean_reviews.csv")
 REPORT_JSON_PATH = os.path.join(BASE_DIR, "analysis", "results", "report.json")
 
@@ -46,13 +47,16 @@ ALTERNATIVE_DISCOVERY_CSV_PATH = os.path.join(BASE_DIR, "blinkit_discovery_revie
 
 def get_corpus_path() -> str:
     """Helper to check and return the active corpus file path."""
-    if os.path.exists(CLEAN_CSV_PATH):
+    if os.path.exists(SCRAPED_CSV_PATH):
+        return SCRAPED_CSV_PATH
+    elif os.path.exists(CLEAN_CSV_PATH):
         return CLEAN_CSV_PATH
     elif os.path.exists(ALTERNATIVE_DISCOVERY_CSV_PATH):
         return ALTERNATIVE_DISCOVERY_CSV_PATH
     elif os.path.exists(ALTERNATIVE_CLEAN_CSV_PATH):
         return ALTERNATIVE_CLEAN_CSV_PATH
     return CLEAN_CSV_PATH
+
 
 @app.get("/api/status", tags=["Status"])
 def read_status():

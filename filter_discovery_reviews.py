@@ -6,7 +6,8 @@ from typing import List, Dict, Any
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_PATH = os.path.join(BASE_DIR, "blinkit_reviews_clean.csv")
-OUTPUT_PATH = os.path.join(BASE_DIR, "blinkit_discovery_reviews.csv")
+OUTPUT_PATH = os.path.join(BASE_DIR, "data", "scraped_reviews.csv")
+BACKWARD_COMPAT_PATH = os.path.join(BASE_DIR, "blinkit_discovery_reviews.csv")
 
 # Define the positive topics, regex patterns, and rationales
 TOPIC_TAXONOMY = [
@@ -177,41 +178,46 @@ def main():
             
     print(f"Filtering complete. Writing relevant dataset to {OUTPUT_PATH}...")
     
-    try:
-        with open(OUTPUT_PATH, mode='w', newline='', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                "source", "date", "rating", "review_text", 
-                "cleaned_text", "relevant_topic", "why_selected", "review_url"
-            ])
-            for r in relevant_reviews:
+    paths_to_write = [OUTPUT_PATH, BACKWARD_COMPAT_PATH]
+    for path in paths_to_write:
+        try:
+            # Ensure the parent directory exists
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, mode='w', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
                 writer.writerow([
-                    r["source"],
-                    r["date"],
-                    r["rating"],
-                    r["review_text"],
-                    r["cleaned_text"],
-                    r["relevant_topic"],
-                    r["why_selected"],
-                    r.get("review_url", "")
+                    "source", "date", "rating", "review_text", 
+                    "cleaned_text", "relevant_topic", "why_selected", "review_url"
                 ])
-                
-        print("\n" + "=" * 60)
-        print("                 DATA FILTERING SUMMARY")
-        print("=" * 60)
-        print(f"Original review count      : {original_count}")
-        print(f"Reviews removed            : {removed_count}")
-        print(f"Final relevant review count: {len(relevant_reviews)}")
-        print("\nRelevant Count by Topic:")
-        for topic, count in sorted(topic_counts.items(), key=lambda x: x[1], reverse=True):
-            print(f"  - {topic:30} : {count:4} reviews")
-        print("\nLocation of generated file:")
-        print(f"  - Relevant file: {OUTPUT_PATH}")
-        print("=" * 60 + "\n")
-        
-    except Exception as e:
-        print(f"ERROR: Failed to write output file: {e}")
-        sys.exit(1)
+                for r in relevant_reviews:
+                    writer.writerow([
+                        r["source"],
+                        r["date"],
+                        r["rating"],
+                        r["review_text"],
+                        r["cleaned_text"],
+                        r["relevant_topic"],
+                        r["why_selected"],
+                        r.get("review_url", "")
+                    ])
+        except Exception as e:
+            print(f"ERROR: Failed to write output file at {path}: {e}")
+            sys.exit(1)
+
+    print("\n" + "=" * 60)
+    print("                 DATA FILTERING SUMMARY")
+    print("=" * 60)
+    print(f"Original review count      : {original_count}")
+    print(f"Reviews removed            : {removed_count}")
+    print(f"Final relevant review count: {len(relevant_reviews)}")
+    print("\nRelevant Count by Topic:")
+    for topic, count in sorted(topic_counts.items(), key=lambda x: x[1], reverse=True):
+        print(f"  - {topic:30} : {count:4} reviews")
+    print("\nLocation of generated files:")
+    print(f"  - Primary file: {OUTPUT_PATH}")
+    print(f"  - Backup file : {BACKWARD_COMPAT_PATH}")
+    print("=" * 60 + "\n")
+
 
 if __name__ == '__main__':
     main()

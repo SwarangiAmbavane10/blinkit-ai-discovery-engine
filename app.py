@@ -14,33 +14,46 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+from pathlib import Path
+
 # Dynamically add the backend/src directory to sys.path to resolve imports cleanly
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-BACKEND_SRC = os.path.join(BASE_DIR, "backend", "src")
-if BACKEND_SRC not in sys.path:
-    sys.path.insert(0, BACKEND_SRC)
+BASE_DIR = Path(__file__).resolve().parent
+BACKEND_SRC = BASE_DIR / "backend" / "src"
+if str(BACKEND_SRC) not in sys.path:
+    sys.path.insert(0, str(BACKEND_SRC))
 
 # File Paths
-CLEAN_CSV_PATH = os.path.join(BASE_DIR, "backend", "data", "clean_reviews.csv")
-REPORT_JSON_PATH = os.path.join(BASE_DIR, "analysis", "results", "report.json")
+SCRAPED_CSV_PATH = BASE_DIR / "data" / "scraped_reviews.csv"
+CLEAN_CSV_PATH = BASE_DIR / "backend" / "data" / "clean_reviews.csv"
+REPORT_JSON_PATH = BASE_DIR / "analysis" / "results" / "report.json"
+
+def get_active_csv_path(fallback_path=None) -> Path:
+    """Checks for dataset candidates in priority order and returns the first existing path."""
+    candidates = [
+        SCRAPED_CSV_PATH,
+        BASE_DIR / "blinkit_discovery_reviews.csv",
+        BASE_DIR / "blinkit_reviews_clean.csv",
+        CLEAN_CSV_PATH
+    ]
+    if fallback_path:
+        candidates.append(Path(fallback_path))
+        
+    for cand in candidates:
+        if cand and cand.exists():
+            return cand
+    return CLEAN_CSV_PATH
 
 # ---------------------------------------------------------
 # Helper Functions to Load and Process Data
 # ---------------------------------------------------------
 @st.cache_data
 def load_clean_reviews(file_path):
-    """Loads cleaned reviews data from CSV, mapping columns to support blinkit_reviews_clean.csv or blinkit_discovery_reviews.csv."""
-    discovery_path = os.path.join(BASE_DIR, "blinkit_discovery_reviews.csv")
-    root_clean_path = os.path.join(BASE_DIR, "blinkit_reviews_clean.csv")
-    if os.path.exists(discovery_path):
-        file_path = discovery_path
-    elif os.path.exists(root_clean_path):
-        file_path = root_clean_path
-
-    if not os.path.exists(file_path):
+    """Loads cleaned reviews data from CSV, checking preferred data/scraped_reviews.csv first and falling back gracefully."""
+    active_path = get_active_csv_path(file_path)
+    if active_path is None or not active_path.exists():
         return None
         
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(active_path)
     
     # Map blinkit_reviews_clean.csv format to expected app.py schema
     if "source" in df.columns and "review_text" in df.columns:
@@ -516,7 +529,7 @@ elif page == "🔍 AI Research Copilot":
                     
                     retriever = RetrievalEngine()
                     # Use absolute path for safety
-                    discovery_path = os.path.join(BASE_DIR, "blinkit_discovery_reviews.csv")
+                    discovery_path = str(get_active_csv_path())
                     retriever.load_corpus(discovery_path)
                     
                     # 2. Retrieve top 20 reviews

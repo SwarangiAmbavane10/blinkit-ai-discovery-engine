@@ -16,7 +16,7 @@ def scrape_app_store(app_name: str = DEFAULT_APP_NAME, app_id: int = DEFAULT_APP
     scraped_data = []
 
     try:
-        from app_store_scraper import AppStore
+        from src.app_store_scraper import AppStore
         # Initialize Apple AppStore scraper (targeting India app store 'in')
         app = AppStore(country='in', app_name=app_name, id=app_id)
         app.review(how_many=limit)

@@ -124,9 +124,8 @@ df_reviews = load_clean_reviews(CLEAN_CSV_PATH)
 report_data = load_analysis_report(REPORT_JSON_PATH)
 
 def render_view_evidence(cited_ids, df_reviews):
-    """Renders a collapsible evidence list of matching cited reviews."""
+    """Renders a compact list of sources supporting the insight."""
     if not cited_ids:
-        st.write("*(No specific reviews cited by the AI)*")
         return
         
     # Standardize cited IDs
@@ -136,33 +135,51 @@ def render_view_evidence(cited_ids, df_reviews):
     matches = df_reviews[df_reviews["review_id"].astype(str).str.lower().isin(clean_ids)]
     
     if matches.empty:
-        st.write("*(No matching reviews found in corpus for these cited IDs)*")
         return
         
-    st.markdown("**View Evidence:**")
+    # Display a maximum of 2–3 citations
+    matches = matches.head(3)
+    
+    platform_mapping = {
+        "play_store": "Google Play",
+        "google_play": "Google Play",
+        "app_store": "App Store",
+        "reddit": "Reddit",
+        "google_form": "Google Forms",
+        "google_forms": "Google Forms",
+    }
+    
+    citations = []
+    review_texts = []
+    
     for _, row in matches.iterrows():
         # Setup source name
-        src_clean = str(row['source_type']).replace("_", " ").title()
-        
-        # Rating display
-        rating_val = row.get('rating')
-        rating_str = f"⭐ {int(rating_val)}" if pd.notna(rating_val) and str(rating_val).strip() != "" else "No Rating"
+        src_raw = str(row.get('source_type', '')).lower()
+        src_clean = platform_mapping.get(src_raw, src_raw.replace("_", " ").title())
         
         # Clickable source link
-        url = row.get('review_url', 'https://play.google.com/store/apps/details?id=com.grofers.customerapp')
+        url = row.get('review_url')
         
-        # Render clean card style block
-        st.markdown(
-            f"""
-            <div style="background-color: #f8f9fa; border-left: 5px solid #ff9900; padding: 12px; margin-bottom: 12px; border-radius: 4px;">
-                <strong>[{src_clean}]</strong> ID: <code>{row['review_id']}</code> | Rating: <strong>{rating_str}</strong> | 
-                <a href="{url}" target="_blank">View Original Source</a>
-                <p style="margin-top: 6px; font-style: italic; font-size: 14px;">"{row['original_text']}"</p>
-                <small style="color: gray;">Click the link above to view the original review.</small>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+        # If a review has no URL (e.g., Google Forms), display "Google Forms Response"
+        if src_raw == "google_form" or not url or pd.isna(url) or str(url).strip() == "":
+            citations.append(f"{src_clean} Response")
+        else:
+            citations.append(f"[{src_clean}]({url})")
+            
+        # Keep review text for optional display (only displayed if explicitly requested via expander)
+        text = row.get('original_text', '')
+        if pd.notna(text) and str(text).strip() != "":
+            review_texts.append(f"**{src_clean}**: \"{text.strip()}\"")
+            
+    if citations:
+        st.markdown("**Sources:**")
+        for cit in citations:
+            st.markdown(f"- {cit}")
+        
+        if review_texts:
+            with st.expander("📄 View supporting review text"):
+                for rt in review_texts:
+                    st.markdown(rt)
 
 # Bootstrapping trigger if files are missing
 if df_reviews is None or report_data is None:
@@ -445,10 +462,8 @@ elif page == "💡 AI Opportunity Generator":
         # Display supporting quotes and clickable evidence reviews
         st.subheader("💬 Opportunity Evidence Citations")
         for opp in opportunities:
-            st.markdown(f"###### Supporting Quotes for *{opp.get('opportunity_name')}*:")
-            for ev in opp.get("evidence", []):
-                st.markdown(f"> *\"{ev}\"*")
-            # Render evidence reviews card
+            st.markdown(f"###### *{opp.get('opportunity_name')}*")
+            # Render evidence reviews/sources
             render_view_evidence(opp.get("cited_review_ids", []), df_reviews)
             st.write("")
     else:
@@ -551,9 +566,6 @@ elif page == "🔍 AI Research Copilot":
                                         st.markdown(f"##### Theme: **{theme.get('theme_name')}** (Frequency: {theme.get('frequency', 'N/A')})")
                                         for pp in theme.get("pain_points", []):
                                             st.write(f"- 🔴 {pp}")
-                                        with st.expander("💬 View Supporting Quotes"):
-                                            for q in theme.get("representative_quotes", []):
-                                                st.markdown(f"> *\"{q}\"*")
                                         render_view_evidence(theme.get("cited_review_ids", []), df_reviews)
                                         st.write("")
                             else:
@@ -577,9 +589,7 @@ elif page == "🔍 AI Research Copilot":
                                 st.table(pd.DataFrame(opp_table))
                                 
                                 for opp in opportunities:
-                                    st.markdown(f"###### Supporting Quotes for *{opp.get('opportunity_name')}*:")
-                                    for ev in opp.get("evidence", []):
-                                        st.markdown(f"> *\"{ev}\"*")
+                                    st.markdown(f"###### *{opp.get('opportunity_name')}*")
                                     render_view_evidence(opp.get("cited_review_ids", []), df_reviews)
                                     st.write("")
                             else:

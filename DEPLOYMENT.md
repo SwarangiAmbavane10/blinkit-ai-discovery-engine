@@ -1,143 +1,113 @@
-# Deployment Guide - Blinkit AI Product Discovery Engine
+# Deployment Guide - Blinkit AI Product Discovery Engine Serverless API
 
-This document provides step-by-step instructions to deploy the Blinkit AI Product Discovery Engine dashboard to production.
+This document provides step-by-step instructions to test and deploy the Blinkit AI Product Discovery Engine backend as a **Serverless FastAPI API** on Vercel.
 
 ---
 
-## 1. Project Framework & Hosting Platform Analysis
+## 1. Project Framework & Vercel Suitability
 
-### Detected Framework
-- **Framework**: [Streamlit](https://streamlit.io/) (Python web app framework).
-- **Frontend Entrypoint**: `app.py`
-- **Backend Processing**: `main.py` (ingestion, cleaning, Cosine/TF-IDF retrieval, and Gemini/Groq LLM analysis).
+### Detected Framework & Architecture
+- **Framework**: [FastAPI](https://fastapi.tiangolo.com/) (Python ASGI web framework).
+- **Entrypoint**: [api/index.py](file:///c:/Users/91911/OneDrive/Desktop/blinkit%20ai%20discovery%20engine/api/index.py).
+- **Platform Capability**: Fully compatible with Vercel's Python serverless runtime builder (`@vercel/python`).
 
-### Hosting Platform Suitability: Vercel vs. Recommended Alternatives
-
-> [!WARNING]
-> **Vercel is NOT the appropriate platform for hosting standard Streamlit applications.**
->
-> **Why Vercel is incompatible:**
-> 1. **Stateless / Serverless Architecture**: Vercel is optimized for static frontends and stateless, short-lived serverless functions. Streamlit, by contrast, requires a persistent Python web server running in the background.
-> 2. **WebSocket Support**: Streamlit relies on long-lived WebSocket connections to send UI event messages between the client browser and Python runtime. Vercel serverless functions do not support WebSockets.
-> 3. **Execution Time Limits**: Vercel serverless functions have hard execution limits (e.g., 10 to 60 seconds), whereas Streamlit dashboard sessions need to stay open for as long as the user is browsing.
->
-> If you deploy this repository directly to Vercel, the build will either fail during runtime resolution or crash instantly because of WebSocket connection failures.
-
-### Recommended Hosting Platforms
-Instead of Vercel, we strongly recommend deploying this project on one of the following platforms:
-1. **Streamlit Community Cloud** (Recommended & Free): The native hosting solution from Streamlit. It deploys directly from your GitHub repo, automatically manages requirements, and handles live WebSocket state seamlessly.
-2. **Render or Railway** (Container/PaaS): Excellent options to host persistent Python background instances. You can run the app directly using the Streamlit CLI or a simple Docker container.
+### Supported API Endpoints
+When deployed, the service exposes the following serverless endpoints:
+* `GET /`: Health status message and link to documentation.
+* `GET /api/status`: Service details, environment stats, configurations, and data corpus/report file existence flags.
+* `GET /api/report`: Reads and returns the precompiled AI Product Insights JSON report ([report.json](file:///c:/Users/91911/OneDrive/Desktop/blinkit%20ai%20discovery%20engine/analysis/results/report.json)).
+* `GET /api/reviews`: Returns reviews loaded from the CSV database ([clean_reviews.csv](file:///c:/Users/91911/OneDrive/Desktop/blinkit%20ai%20discovery%20engine/backend/data/clean_reviews.csv)), with optional parameters for pagination (`limit`, `offset`) and filtering (`source_type`, `sentiment`).
+* `GET /api/query`: Performs semantic/TF-IDF similarity searches on the corpus using the backend's `RetrievalEngine` (`q` query string and `top_k` count).
+* `POST /api/run`: Triggers the dynamic reviews scraping, cleaning, and LLM analysis pipeline (invokes `main.main()`).
 
 ---
 
 ## 2. Environment Variables & Secrets Configuration
 
-All configuration is loaded via environment variables (mapped through [settings.py](file:///c:/Users/91911/OneDrive/Desktop/blinkit%20ai%20discovery%20engine/backend/src/discovery_engine/config/settings.py)). When deploying, make sure to add these variables to your hosting provider's dashboard:
+Paste the following variables in your Vercel Dashboard under **Settings -> Environment Variables** or define them in your local `.env` file:
 
 ### Core Secrets
-- `LLM_PROVIDER`: Set to either `gemini` (default) or `groq` to select the LLM client.
+- `LLM_PROVIDER`: Set to either `gemini` (default) or `groq`.
 - `GEMINI_API_KEY`: Required if `LLM_PROVIDER=gemini`. Your Google AI Studio Gemini API Key.
 - `GROQ_API_KEY`: Required if `LLM_PROVIDER=groq`. Your Groq Cloud Console API Key.
 
-### Optional Configurations
-- `LOG_LEVEL`: Logging verbosity (e.g., `INFO`, `DEBUG`). Defaults to `INFO`.
+### Optional Configs
+- `LOG_LEVEL`: Logging level (e.g. `INFO`, `DEBUG`). Defaults to `INFO`.
 - `GEMINI_MODEL`: Gemini model version to use. Defaults to `gemini-1.5-flash`.
 - `GROQ_MODEL`: Groq model version to use. Defaults to `llama-3.3-70b-versatile`.
 - `PLAY_STORE_APP_ID`: Defaults to `com.grofers.customerapp`.
 - `APP_STORE_APP_ID`: Defaults to `1393452285`.
-- `CLEANED_DATA_PATH`: Path to the clean CSV database. Defaults to `backend/data/clean_reviews.csv`.
-
-> [!NOTE]
-> **Production Read-Only Behavior:**
-> The dashboard is pre-populated with a pre-computed clean reviews corpus ([clean_reviews.csv](file:///c:/Users/91911/OneDrive/Desktop/blinkit%20ai%20discovery%20engine/backend/data/clean_reviews.csv)) and a pre-synthesized AI insights report ([report.json](file:///c:/Users/91911/OneDrive/Desktop/blinkit%20ai%20discovery%20engine/analysis/results/report.json)) tracked in Git. 
-> 
-> Therefore, in production environments with ephemeral storage (like Streamlit Cloud or Render Free), the dashboard will render fully and run **read-only** immediately. Running the live ingestion pipeline via the button on the dashboard is disabled/not recommended in production because any new files written will be lost when the container recycles.
 
 ---
 
-## 3. Step-by-Step Deployment Instructions
+## 3. Local Verification & Testing
 
-### Option A: Streamlit Community Cloud (Recommended)
+Verify imports and execution flow locally before deploying to Vercel:
 
-Streamlit Community Cloud is free and provides native support.
-
-1. **Push your code to GitHub**: Ensure all changes are committed and pushed to a repository on your GitHub account.
-2. **Sign in to Streamlit**: Go to [share.streamlit.io](https://share.streamlit.io/) and log in using your GitHub account.
-3. **Deploy a new app**:
-   - Click the **"New app"** button.
-   - Select your Repository, Branch (usually `main`), and specify the Main file path as `app.py`.
-4. **Configure Secrets**:
-   - Click the **"Advanced settings..."** button before deploying or go to Settings in your app console.
-   - In the **Secrets** text area, paste your environment variables in TOML format:
-     ```toml
-     LLM_PROVIDER = "gemini"
-     GEMINI_API_KEY = "your-api-key-here"
-     ```
-5. **Deploy**: Click **"Deploy!"**. Streamlit will provision the server, install Python dependencies from `requirements.txt`, and launch your app.
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Start the local ASGI web server**:
+   ```bash
+   uvicorn api.index:app --reload
+   ```
+3. **Inspect and Test**:
+   - Access the interactive OpenAPI documentation: `http://127.0.0.1:8000/docs`
+   - Test health check: `http://127.0.0.1:8000/api/status`
+   - Test retrieval search: `http://127.0.0.1:8000/api/query?q=premium&top_k=3`
+   - Test corpus reviews: `http://127.0.0.1:8000/api/reviews?limit=5`
 
 ---
 
-### Option B: Render Deployment (Alternative)
+## 4. Vercel Deployment Instructions
 
-Render allows you to run a persistent web service.
-
-1. **Sign in to Render**: Log in at [dashboard.render.com](https://dashboard.render.com/).
-2. **Create a Web Service**:
-   - Click **New +** and select **Web Service**.
-   - Connect your GitHub repository.
-3. **Configure Service Settings**:
-   - **Name**: `blinkit-ai-discovery-engine`
-   - **Language**: `Python` or `Docker` (Python is simpler).
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
-4. **Configure Environment Variables**:
-   - Scroll down to the **Environment** section.
-   - Click **Add Environment Variable** and add:
-     - `LLM_PROVIDER` (e.g., `gemini`)
-     - `GEMINI_API_KEY` (your API key)
-5. **Deploy**: Click **Create Web Service**. Render will build and expose the app with a public URL.
-
----
-
-### Option C: Vercel Deployment (Fallback Attempt)
-
-If deployment to Vercel is strictly required, you can attempt to host it using Vercel's Python serverless builder, although dynamic UI interactions will fail.
+### Option A: Deployment via Vercel CLI (Recommended)
 
 1. **Install Vercel CLI**:
    ```bash
    npm install -g vercel
    ```
-2. **Create/Verify `vercel.json`**:
-   Ensure the following `vercel.json` file exists in the root of the repository:
+2. **Authenticate**:
+   ```bash
+   vercel login
+   ```
+3. **Configure Routing**:
+   Ensure `vercel.json` exists in the root directory:
    ```json
    {
      "version": 2,
      "builds": [
        {
-         "src": "app.py",
+         "src": "api/index.py",
          "use": "@vercel/python"
        }
      ],
      "routes": [
        {
          "src": "/(.*)",
-         "dest": "app.py"
+         "dest": "api/index.py"
        }
      ]
    }
    ```
-3. **Login and Deploy**:
-   Open a terminal in the project root and run:
+4. **Deploy**:
    ```bash
-   vercel login
    vercel
    ```
-   Follow the prompts to link the project.
-4. **Set Environment Variables on Vercel**:
-   Go to your Vercel Dashboard, select your project -> **Settings** -> **Environment Variables**, and add `GEMINI_API_KEY` and/or `GROQ_API_KEY`.
-5. **Promote to Production**:
+   Follow the prompts to link to your Vercel account.
+5. **Set Environment Variables on Vercel**:
+   Go to your project settings in the Vercel Web Console and add your secrets (`GEMINI_API_KEY`, etc.).
+6. **Promote to Production**:
    ```bash
    vercel --prod
    ```
 
-*Note: Since Vercel executes `app.py` as a serverless function, it will fail to support the persistent WebSocket server needed for Streamlit. We strongly encourage deploying via **Option A** or **Option B**.*
+### Option B: Deployment via Vercel GitHub Integration
+
+1. Push your repository to GitHub.
+2. In the Vercel dashboard, click **"Add New"** -> **"Project"**.
+3. Import your GitHub repository.
+4. Vercel will automatically discover the `vercel.json` and detect the Python configuration.
+5. Expand the **Environment Variables** section and paste your keys.
+6. Click **"Deploy"**. Vercel will run `pip install`, build your functions, and expose the API.

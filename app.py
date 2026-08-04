@@ -104,12 +104,27 @@ def load_clean_reviews(file_path):
     return df
 
 
+@st.cache_data
 def load_analysis_report(file_path):
     """Loads Phase 5 report from JSON."""
     if not os.path.exists(file_path):
         return None
     with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+@st.cache_resource
+def get_retrieval_engine(csv_path: str):
+    """Caches the RetrievalEngine instance and preloaded corpus reviews."""
+    from discovery_engine.retrieval.engine import RetrievalEngine
+    retriever = RetrievalEngine()
+    retriever.load_corpus(csv_path)
+    return retriever
+
+@st.cache_resource
+def get_gemini_client():
+    """Caches the GeminiClient instance."""
+    from discovery_engine.llm.client import GeminiClient
+    return GeminiClient()
 
 def run_backend_pipeline():
     """Triggers the backend pipeline using main.py directly."""
@@ -510,6 +525,11 @@ elif page == "🔍 AI Research Copilot":
     st.title("🔍 AI Research Copilot")
     st.markdown("Ask custom research questions to the AI Discovery Engine. The engine will retrieve the most relevant reviews from the filtered corpus and perform real-time structured analysis backed by concrete evidence.")
 
+    if "copilot_result" not in st.session_state:
+        st.session_state.copilot_result = None
+    if "copilot_question" not in st.session_state:
+        st.session_state.copilot_question = ""
+
     custom_question = st.text_input(
         "Enter your research question:",
         value="Why don't users explore categories?",
@@ -520,17 +540,14 @@ elif page == "🔍 AI Research Copilot":
         if not custom_question.strip():
             st.warning("Please enter a valid research question.")
         else:
+            # Reset session state for new query
+            st.session_state.copilot_result = None
+            st.session_state.copilot_question = ""
+            
             with st.spinner("Retrieving relevant reviews and invoking AI synthesis..."):
                 try:
-                    # 1. Initialize retrieval engine
-                    from discovery_engine.retrieval.engine import RetrievalEngine
-                    from discovery_engine.llm.prompt_builder import PromptBuilder
-                    from discovery_engine.llm.client import GeminiClient
-                    
-                    retriever = RetrievalEngine()
-                    # Use absolute path for safety
                     discovery_path = str(get_active_csv_path())
-                    retriever.load_corpus(discovery_path)
+                    retriever = get_retrieval_engine(discovery_path)
                     
                     # 2. Retrieve top 20 reviews
                     top_reviews = retriever.retrieve(query=custom_question, top_k=20)
@@ -538,9 +555,8 @@ elif page == "🔍 AI Research Copilot":
                     if not top_reviews:
                         st.error("No reviews could be retrieved for this question.")
                     else:
-                        st.success(f"Retrieved **{len(top_reviews)}** supporting reviews from corpus!")
-                        
                         # 3. Build Prompt
+                        from discovery_engine.llm.prompt_builder import PromptBuilder
                         business_goal = "Increase the percentage of Monthly Active Customers (MAC) who purchase from at least one new category every month."
                         prompt = PromptBuilder.build_synthesis_prompt(
                             business_goal=business_goal,
@@ -549,7 +565,7 @@ elif page == "🔍 AI Research Copilot":
                         )
                         
                         # 4. Call Gemini/Groq client
-                        client = GeminiClient()
+                        client = get_gemini_client()
                         analysis_result = client.generate_content(prompt, json_mode=True)
                         
                         if "error" in analysis_result:
@@ -557,80 +573,89 @@ elif page == "🔍 AI Research Copilot":
                             if "raw_output" in analysis_result:
                                 st.code(analysis_result["raw_output"])
                         else:
+                            st.session_state.copilot_result = analysis_result
+                            st.session_state.copilot_question = custom_question
                             st.balloons()
-                            st.markdown("### 📊 Analysis Results")
                             
-                            # Concise AI-generated answer/confidence summary
-                            overall = analysis_result.get("overall_analysis", {})
-                            st.subheader("Calibration & Confidence Summary")
-                            st.markdown(f"**Engine Confidence Rating:** :blue[{overall.get('confidence_score', 'N/A')}]")
-                            st.markdown(f"**Calibration Details:** {overall.get('confidence_rationale', '')}")
-                            
-                            st.markdown("---")
-                            
-                            # Render Theme Clustering
-                            st.subheader("🚨 Identified Customer Pain Points & Themes")
-                            theme_clusters = analysis_result.get("theme_clustering", [])
-                            if theme_clusters:
-                                for idx, cluster in enumerate(theme_clusters):
-                                    st.markdown(f"#### Cluster {idx+1}: {cluster.get('cluster_name')}")
-                                    st.caption(cluster.get("description", ""))
-                                    for theme in cluster.get("themes", []):
-                                        st.markdown(f"##### Theme: **{theme.get('theme_name')}** (Frequency: {theme.get('frequency', 'N/A')})")
-                                        for pp in theme.get("pain_points", []):
-                                            st.write(f"- 🔴 {pp}")
-                                        render_view_evidence(theme.get("cited_review_ids", []), df_reviews)
-                                        st.write("")
-                            else:
-                                st.info("No theme clusters generated for this query.")
-                                
-                            st.markdown("---")
-                            
-                            # Render Opportunities
-                            st.subheader("💡 Opportunity Backlog")
-                            opportunities = analysis_result.get("opportunities", [])
-                            if opportunities:
-                                opp_table = []
-                                for opp in opportunities:
-                                    opp_table.append({
-                                        "Opportunity": opp.get("opportunity_name"),
-                                        "Description": opp.get("description"),
-                                        "Target Segment": opp.get("target_segment"),
-                                        "Impact": opp.get("business_impact"),
-                                        "Effort Tier": opp.get("effort_tier")
-                                    })
-                                st.table(pd.DataFrame(opp_table))
-                                
-                                for opp in opportunities:
-                                    st.markdown(f"###### *{opp.get('opportunity_name')}*")
-                                    render_view_evidence(opp.get("cited_review_ids", []), df_reviews)
-                                    st.write("")
-                            else:
-                                st.info("No opportunity backlog generated for this query.")
-                                
-                            st.markdown("---")
-                            
-                            # JTBD
-                            st.subheader("🎯 Jobs-To-Be-Done (JTBD) Hypotheses")
-                            jtbds = analysis_result.get("jtbd", [])
-                            if jtbds:
-                                for idx, jtbd in enumerate(jtbds):
-                                    st.info(
-                                        f"**Job #{idx+1}**\n\n"
-                                        f"- **When:** {jtbd.get('situation')}\n"
-                                        f"- **I want to:** {jtbd.get('motivation')}\n"
-                                        f"- **So that:** {jtbd.get('expected_outcome')}"
-                                    )
-                                    
-                            # Root Cause
-                            st.subheader("🌲 Root Cause Trees")
-                            root_causes = analysis_result.get("root_cause_analysis", [])
-                            if root_causes:
-                                for rc in root_causes:
-                                    st.error(f"**Symptom:** {rc.get('symptom')}")
-                                    st.warning(f"  └── **Intermediate Cause:** {rc.get('intermediate_cause')}")
-                                    st.success(f"    └── **Systemic Root Cause:** {rc.get('root_cause')}")
-                                    st.write("")
-                                    
                 except Exception as ex:
                     st.error(f"An error occurred during analysis: {ex}")
+
+    if st.session_state.copilot_result is not None:
+        analysis_result = st.session_state.copilot_result
+        q_used = st.session_state.copilot_question
+        
+        st.info(f"Displaying analysis results for: **{q_used}**")
+        st.markdown("### 📊 Analysis Results")
+        
+        # Concise AI-generated answer/confidence summary
+        overall = analysis_result.get("overall_analysis", {})
+        st.subheader("Calibration & Confidence Summary")
+        st.markdown(f"**Engine Confidence Rating:** :blue[{overall.get('confidence_score', 'N/A')}]")
+        st.markdown(f"**Calibration Details:** {overall.get('confidence_rationale', '')}")
+        
+        st.markdown("---")
+        
+        # Render Theme Clustering
+        st.subheader("🚨 Identified Customer Pain Points & Themes")
+        theme_clusters = analysis_result.get("theme_clustering", [])
+        if theme_clusters:
+            for idx, cluster in enumerate(theme_clusters):
+                st.markdown(f"#### Cluster {idx+1}: {cluster.get('cluster_name')}")
+                st.caption(cluster.get("description", ""))
+                for theme in cluster.get("themes", []):
+                    st.markdown(f"##### Theme: **{theme.get('theme_name')}** (Frequency: {theme.get('frequency', 'N/A')})")
+                    for pp in theme.get("pain_points", []):
+                        st.write(f"- 🔴 {pp}")
+                    render_view_evidence(theme.get("cited_review_ids", []), df_reviews)
+                    st.write("")
+        else:
+            st.info("No theme clusters generated for this query.")
+            
+        st.markdown("---")
+        
+        # Render Opportunities
+        st.subheader("💡 Opportunity Backlog")
+        opportunities = analysis_result.get("opportunities", [])
+        if opportunities:
+            opp_table = []
+            for opp in opportunities:
+                opp_table.append({
+                    "Opportunity": opp.get("opportunity_name"),
+                    "Description": opp.get("description"),
+                    "Target Segment": opp.get("target_segment"),
+                    "Impact": opp.get("business_impact"),
+                    "Effort Tier": opp.get("effort_tier")
+                })
+            st.table(pd.DataFrame(opp_table))
+            
+            for opp in opportunities:
+                st.markdown(f"###### *{opp.get('opportunity_name')}*")
+                render_view_evidence(opp.get("cited_review_ids", []), df_reviews)
+                st.write("")
+        else:
+            st.info("No opportunity backlog generated for this query.")
+            
+        st.markdown("---")
+        
+        # JTBD
+        st.subheader("🎯 Jobs-To-Be-Done (JTBD) Hypotheses")
+        jtbds = analysis_result.get("jtbd", [])
+        if jtbds:
+            for idx, jtbd in enumerate(jtbds):
+                st.info(
+                    f"**Job #{idx+1}**\n\n"
+                    f"- **When:** {jtbd.get('situation')}\n"
+                    f"- **I want to:** {jtbd.get('motivation')}\n"
+                    f"- **So that:** {jtbd.get('expected_outcome')}"
+                )
+                
+        # Root Cause
+        st.subheader("🌲 Root Cause Trees")
+        root_causes = analysis_result.get("root_cause_analysis", [])
+        if root_causes:
+            for rc in root_causes:
+                st.error(f"**Symptom:** {rc.get('symptom')}")
+                st.warning(f"  └── **Intermediate Cause:** {rc.get('intermediate_cause')}")
+                st.success(f"    └── **Systemic Root Cause:** {rc.get('root_cause')}")
+                st.write("")
+

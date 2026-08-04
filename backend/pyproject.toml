@@ -2,7 +2,7 @@
 name = "discovery_engine"
 version = "0.1.0"
 description = "Blinkit AI Product Discovery Engine Ingestion & Processing Layer"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.13"
 dependencies = [
     "pydantic>=2.0.0",
     "pydantic-settings>=2.0.0",
